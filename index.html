@@ -2,1443 +2,689 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beatriz Reis | Tecnologia que Resolve</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- SEO -->
-<meta name="description" content="Beatriz Reis — desenvolvedora full-stack que transforma ideias em soluções digitais reais. Especialista em automações, sistemas web e aplicativos sob medida para empresas.">
+<title>Beatriz C. Reis — Gestão de projetos, IA aplicada e desenvolvimento full-stack</title>
+<meta name="description" content="Trabalho dentro da operação comercial da indústria farmacêutica e construo o software que ela precisa. Sete produtos entregues, três no ar. PWAs offline, Web Push, Supabase e arquitetura de custo zero.">
 <meta name="robots" content="index, follow">
+<meta name="author" content="Beatriz C. Reis">
+
+<!-- O português mora em "/", o inglês em "/en". Dois endereços de verdade,
+     para o buscador poder indexar e servir cada idioma ao público certo. -->
 <link rel="canonical" href="https://beatrizreis.vercel.app/">
+<link rel="alternate" hreflang="pt-BR" href="https://beatrizreis.vercel.app/">
+<link rel="alternate" hreflang="en"    href="https://beatrizreis.vercel.app/en">
+<link rel="alternate" hreflang="x-default" href="https://beatrizreis.vercel.app/">
 
-<!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Beatriz C. Reis">
 <meta property="og:url" content="https://beatrizreis.vercel.app/">
-<meta property="og:title" content="Beatriz Reis | Tecnologia que Resolve">
-<meta property="og:description" content="Desenvolvedora full-stack especializada em automações, sistemas web e aplicativos sob medida. Transformo ideias em soluções digitais que realmente funcionam.">
+<meta property="og:title" content="Beatriz C. Reis — Gestão de projetos, IA aplicada e desenvolvimento full-stack">
+<meta property="og:description" content="Trabalho dentro da operação comercial da indústria farmacêutica e construo o software que ela precisa. Sete produtos entregues, três no ar.">
 <meta property="og:image" content="https://beatrizreis.vercel.app/img/beatriz-reis.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Beatriz Reis">
-
-<!-- Twitter Card -->
+<meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Beatriz Reis | Tecnologia que Resolve">
-<meta name="twitter:description" content="Desenvolvedora full-stack especializada em automações, sistemas web e aplicativos sob medida.">
+<meta name="twitter:title" content="Beatriz C. Reis — Gestão de projetos, IA aplicada e desenvolvimento full-stack">
+<meta name="twitter:description" content="Trabalho dentro da operação comercial da indústria farmacêutica e construo o software que ela precisa.">
 <meta name="twitter:image" content="https://beatrizreis.vercel.app/img/beatriz-reis.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --ink: #0c0c14;
-  --ink2: #111118;
-  --ink3: #1a1a2c;
-  --paper: #f5f3ef;
-  --lime: #DA7756;
-  --violet: #5b3af7;
-  --sky: #38d9f5;
-  --muted: #6b6b8a;
-  --border-dark: rgba(255,255,255,0.07);
-  --border-light: rgba(12,12,20,0.1);
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--ink);
-  color: #f0eeff;
-  font-family: 'Manrope', sans-serif;
-  overflow-x: hidden;
-  cursor: none;
-}
 
-/* CURSOR */
-.cursor {
-  width: 10px; height: 10px;
-  background: var(--lime); border-radius: 50%;
-  position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9999;
-  transform: translate(-50%,-50%);
-  mix-blend-mode: difference;
-  transition: width .3s, height .3s, opacity .3s;
-}
-.cursor.expand { width: 44px; height: 44px; opacity: .5; }
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16140f" media="(prefers-color-scheme: dark)">
 
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 1rem 3rem;
-  background: rgba(12,12,20,0.88);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-dark);
-}
-.logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: .06em; }
-.logo span { color: var(--lime); }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a {
-  color: rgba(245,243,239,.5); text-decoration: none;
-  font-size: .82rem; font-weight: 500;
-  letter-spacing: .06em; text-transform: uppercase;
-  transition: color .2s; position: relative;
-}
-.nav-links a::after {
-  content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
-  height: 1px; background: var(--lime);
-  transform: scaleX(0); transform-origin: left; transition: transform .3s;
-}
-.nav-links a:hover { color: #f0eeff; }
-.nav-links a:hover::after { transform: scaleX(1); }
-.nav-pill {
-  background: var(--lime); color: var(--ink);
-  padding: .5rem 1.4rem; border-radius: 100px;
-  font-weight: 700; font-size: .8rem;
-  letter-spacing: .06em; text-transform: uppercase;
-  text-decoration: none; transition: background .2s, transform .2s;
-}
-.nav-pill:hover { background: #e8906a; transform: scale(1.04); }
-nav.action-visible .nav-links,
-nav.action-visible .nav-pill { opacity: 0; pointer-events: none; transition: opacity .25s; }
+<!-- As fontes são servidas por este mesmo domínio (ver css/fontes.css).
+     Nada sai daqui para terceiros — nem uma requisição. -->
+<link rel="preload" href="fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fontes.css">
+<link rel="stylesheet" href="css/site.css">
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  text-align: center;
-  padding: 8rem 2rem 5rem;
-  position: relative; overflow: hidden;
-}
-.glow-1 {
-  position: absolute; border-radius: 50%; pointer-events: none;
-  width: 700px; height: 700px;
-  background: radial-gradient(circle, rgba(91,58,247,0.12) 0%, transparent 70%);
-  top: 50%; left: 50%; transform: translate(-50%,-50%);
-}
-.glow-2 {
-  position: absolute; border-radius: 50%; pointer-events: none;
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(218,119,86,0.07) 0%, transparent 70%);
-  top: 20%; right: 8%;
-}
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: .5rem;
-  font-size: .7rem; font-weight: 700;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--lime); margin-bottom: 1.4rem;
-  animation: fadeUp .6s ease both;
-}
-.eyebrow-line { width: 28px; height: 2px; background: var(--lime); }
-.hero h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: .95; letter-spacing: .02em;
-  max-width: 820px;
-  animation: fadeUp .7s .08s ease both;
-}
-.hero h1 .outline { -webkit-text-stroke: 2px #f0eeff; color: transparent; }
-.hero h1 .lime { color: var(--lime); }
-.hero-sub {
-  max-width: 480px; color: rgba(240,238,255,.5);
-  font-size: 1rem; font-weight: 300; line-height: 1.75;
-  margin: 1.4rem auto 2.2rem;
-  animation: fadeUp .7s .14s ease both;
-}
+<script>
+/* Roda antes de qualquer pintura, para aplicar o tema guardado — senão
+   o claro pisca antes do escuro.
 
-/* HERO PREVIEWS — 3 cards */
-.hero-previews {
-  display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap;
-  margin-bottom: 2.2rem;
-  animation: fadeUp .7s .2s ease both;
-}
-.preview-card {
-  background: var(--ink2);
-  border: 1px solid var(--border-dark);
-  border-radius: 14px; overflow: hidden;
-  width: 110px;
-  transition: transform .3s, box-shadow .3s, border-color .3s;
-  cursor: pointer; text-decoration: none;
-}
-.preview-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
-  border-color: rgba(218,119,86,0.35);
-}
-.preview-card img {
-  width: 100%; height: 75px; object-fit: cover; display: block;
-}
-.preview-label {
-  font-size: .6rem; font-weight: 700;
-  letter-spacing: .06em; text-transform: uppercase;
-  color: rgba(240,238,255,.45);
-  padding: .4rem .55rem; text-align: center; line-height: 1.35;
-}
-.preview-label em {
-  display: block; font-style: normal;
-  color: var(--lime); font-size: .56rem; margin-top: .15rem;
-}
-
-.hero-btns {
-  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
-  animation: fadeUp .7s .26s ease both;
-}
-.btn-lime {
-  background: var(--lime); color: var(--ink);
-  padding: .9rem 2.2rem; border-radius: 100px;
-  font-weight: 800; font-size: .95rem; text-decoration: none;
-  box-shadow: 0 4px 28px rgba(218,119,86,0.4);
-  transition: transform .25s, box-shadow .25s;
-}
-.btn-lime:hover { transform: translateY(-3px); box-shadow: 0 10px 40px rgba(218,119,86,0.5); }
-.btn-ghost-w {
-  background: transparent; color: rgba(240,238,255,.7);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: .9rem 2.2rem; border-radius: 100px;
-  font-weight: 500; font-size: .95rem; text-decoration: none;
-  transition: border-color .2s, transform .2s, color .2s;
-}
-.btn-ghost-w:hover { border-color: var(--lime); transform: translateY(-3px); color: #f0eeff; }
-
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(20px); }
-  to   { opacity:1; transform:translateY(0); }
-}
-
-/* TICKER */
-.ticker-wrap { overflow: hidden; background: var(--lime); padding: .7rem 0; }
-.ticker { display: flex; width: max-content; animation: tick 24s linear infinite; }
-.ticker-item {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: .95rem; letter-spacing: .1em;
-  color: var(--ink); padding: 0 2rem; white-space: nowrap;
-}
-@keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-
-/* SECTIONS */
-section { padding: 6rem 2rem; }
-.container { max-width: 1100px; margin: 0 auto; }
-.section-label {
-  font-size: .7rem; font-weight: 700;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--lime); margin-bottom: .8rem;
-}
-h2.sec-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: .95; letter-spacing: .02em; margin-bottom: .8rem;
-}
-
-/* SERVICES */
-#services { background: var(--ink); color: #f0eeff; }
-.svc-header {
-  display: flex; justify-content: space-between; align-items: flex-end;
-  margin-bottom: 3.5rem; flex-wrap: wrap; gap: 2rem;
-}
-.svc-header h2.sec-title { color: #f0eeff; }
-.svc-header .section-label { color: rgba(218,119,86,.8); }
-.svc-header .sub { max-width: 280px; color: rgba(240,238,255,.45); font-size: .9rem; line-height: 1.75; }
-.svc-grid {
-  display: grid; grid-template-columns: repeat(2,1fr);
-  gap: 1.25rem;
-}
-.svc-item {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 20px; padding: 2.4rem;
-  position: relative; overflow: hidden;
-  transition: transform .3s, border-color .3s, background .3s;
-  display: flex; flex-direction: column; gap: .9rem;
-}
-.svc-item::before {
-  content: ''; position: absolute; top: 0; left: 2rem; right: 2rem;
-  height: 2px; border-radius: 0 0 4px 4px;
-  background: linear-gradient(90deg, var(--lime), rgba(218,119,86,.6));
-  opacity: 0; transition: opacity .3s;
-}
-.svc-item:hover { transform: translateY(-5px); border-color: rgba(200,241,53,.25); background: rgba(255,255,255,.07); }
-.svc-item:hover::before { opacity: 1; }
-.svc-n {
-  font-family:'Bebas Neue',sans-serif; font-size:.8rem; letter-spacing:.14em;
-  color: rgba(240,238,255,.25); display:block;
-}
-.svc-icon-wrap {
-  width: 48px; height: 48px; border-radius: 14px;
-  background: rgba(200,241,53,.09); border: 1px solid rgba(200,241,53,.18);
-  display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
-  transition: background .3s, border-color .3s;
-}
-.svc-item:hover .svc-icon-wrap { background: rgba(200,241,53,.14); border-color: rgba(200,241,53,.3); }
-.svc-item h3 {
-  font-family:'Manrope',sans-serif; font-weight:700; font-size:1.08rem;
-  color: #f0eeff; margin: 0;
-}
-.svc-item p { color: rgba(240,238,255,.45); font-size:.88rem; line-height:1.7; margin:0; }
-.svc-result {
-  margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,.06);
-  font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-  color: var(--lime); display: flex; align-items: center; gap: .45rem;
-}
-.svc-result::before { content: '→'; }
-
-/* PORTFOLIO */
-#portfolio { background: var(--ink); }
-.port-header {
-  display: flex; justify-content: space-between; align-items: flex-end;
-  margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem;
-}
-.port-header .sub { max-width: 260px; color:var(--muted); font-size:.88rem; line-height:1.7; }
-.project-row {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 3rem; align-items: center;
-  padding: 3.5rem 0;
-  border-top: 1px solid var(--border-dark);
-}
-.project-row:last-child { border-bottom: 1px solid var(--border-dark); }
-.project-row.flip .proj-visual { order:2; }
-.project-row.flip .proj-info { order:1; }
-.screens-wrap { display:flex; gap:.8rem; align-items:flex-start; }
-.sc-main { flex:1; border-radius:14px; overflow:hidden; border:1px solid var(--border-dark); box-shadow:0 20px 60px rgba(0,0,0,.5); transition:transform .4s; }
-.sc-main:hover { transform:translateY(-8px) rotate(-1deg); }
-.sc-side { width:38%; border-radius:14px; overflow:hidden; border:1px solid var(--border-dark); box-shadow:0 20px 60px rgba(0,0,0,.5); margin-top:1.5rem; transition:transform .4s; }
-.sc-side:hover { transform:translateY(-8px) rotate(1deg); }
-.screens-wrap img { width:100%; display:block; }
-.proj-single { border-radius:18px; overflow:hidden; border:1px solid var(--border-dark); box-shadow:0 24px 80px rgba(0,0,0,.5); transition:transform .4s; max-width:340px; margin:0 auto; }
-.proj-single:hover { transform:translateY(-10px); }
-.proj-single img { width:100%; display:block; }
-.proj-num { font-family:'Bebas Neue',sans-serif; font-size:.85rem; letter-spacing:.15em; color:var(--muted); margin-bottom:.8rem; }
-.proj-tag {
-  display:inline-flex; align-items:center; gap:.4rem;
-  background:rgba(218,119,86,.1); border:1px solid rgba(218,119,86,.2);
-  color:var(--lime); font-size:.68rem; font-weight:700;
-  letter-spacing:.1em; text-transform:uppercase;
-  padding:.28rem .8rem; border-radius:100px; margin-bottom:1rem;
-}
-.proj-info h3 {
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(1.8rem,3vw,2.6rem);
-  line-height:1.05; letter-spacing:.02em; margin-bottom:.9rem;
-}
-.proj-info p { color:rgba(240,238,255,.5); font-size:.9rem; line-height:1.78; margin-bottom:1.2rem; }
-.feat-chips { display:flex; flex-wrap:wrap; gap:.5rem; }
-.chip {
-  background:var(--ink3); border:1px solid var(--border-dark);
-  color:rgba(240,238,255,.6); font-size:.73rem; font-weight:500;
-  padding:.32rem .9rem; border-radius:100px;
-}
-
-/* Bot mockup phone */
-.bot-phone-wrap {
-  display: flex; justify-content: center;
-}
-.bot-phone {
-  position: relative;
-  width: 240px;
-  border-radius: 30px; overflow: hidden;
-  border: 2px solid rgba(255,255,255,0.12);
-  box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 8px rgba(218,119,86,0.06);
-  transition: transform .4s;
-}
-.bot-phone:hover { transform: translateY(-10px) rotate(.5deg); }
-.bot-phone img { width:100%; display:block; }
-.bot-live-badge {
-  position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
-  background: rgba(37,211,102,0.15);
-  border: 1px solid rgba(37,211,102,0.4);
-  color: #25d366;
-  padding: .3rem .8rem; border-radius: 100px;
-  font-size: .62rem; font-weight: 700;
-  letter-spacing: .08em; text-transform: uppercase;
-  display: flex; align-items: center; gap: .35rem;
-  white-space: nowrap;
-}
-.live-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: #25d366;
-  animation: pulse-g 1.5s infinite;
-}
-@keyframes pulse-g { 0%,100%{opacity:1} 50%{opacity:.3} }
-
-/* CONFIDENTIAL */
-.proj-pharma {
-  grid-column: 1/-1;
-  background: var(--ink3);
-  border: 1px solid var(--border-dark);
-  border-radius: 18px; padding: 2.5rem;
-  display: flex; gap: 2rem; align-items: center;
-}
-.pharma-icon {
-  width: 64px; height: 64px; flex-shrink: 0;
-  border-radius: 16px;
-  background: rgba(218,119,86,0.08);
-  border: 1px solid rgba(218,119,86,0.2);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem;
-}
-.pharma-text .proj-tag { margin-bottom: .7rem; }
-.pharma-text h3 {
-  font-family:'Bebas Neue',sans-serif;
-  font-size:1.8rem; line-height:1; letter-spacing:.02em; margin-bottom:.6rem;
-}
-.pharma-text p { color:rgba(240,238,255,.4); font-size:.88rem; line-height:1.7; }
-
-/* ABOUT */
-#about { background: var(--ink2); }
-.about-row {
-  display: flex; gap: 3rem; align-items: center; flex-wrap: wrap;
-}
-.about-avatar {
-  width: 130px; height: 130px; flex-shrink: 0;
-  border-radius: 50%; overflow: hidden;
-  border: 3px solid var(--lime);
-  box-shadow: 0 0 0 6px rgba(218,119,86,0.1);
-}
-.about-avatar img { width:100%; height:100%; object-fit:cover; display:block; }
-.about-eyebrow {
-  font-size:.68rem; font-weight:700;
-  letter-spacing:.14em; text-transform:uppercase;
-  color:var(--muted); margin-bottom:.8rem;
-}
-.about-info h3 {
-  font-family:'Bebas Neue',sans-serif;
-  font-size:1.9rem; line-height:1; letter-spacing:.02em; margin-bottom:.9rem;
-}
-.about-info h3 span { color:var(--lime); }
-.about-badges { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.1rem; }
-.about-badge {
-  display:inline-flex; align-items:center; gap:.4rem;
-  background:rgba(218,119,86,0.08);
-  border:1px solid rgba(218,119,86,0.2);
-  color:var(--lime); padding:.3rem .85rem; border-radius:100px;
-  font-size:.7rem; font-weight:600;
-  letter-spacing:.06em; text-transform:uppercase;
-}
-.about-desc { color:rgba(240,238,255,.45); font-size:.88rem; line-height:1.75; max-width:540px; }
-
-/* STATS */
-/* NAV SCROLL */
-nav.scrolled {
-  background: rgba(12,12,20,0.97);
-  box-shadow: 0 4px 30px rgba(0,0,0,.4);
-}
-
-/* STICKY ACTION BAR */
-.action-bar {
-  position: fixed; top: 57px; left: 0; right: 0; z-index: 190;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: .55rem 3rem;
-  background: rgba(10,10,18,0.96);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(218,119,86,.2);
-  transform: translateY(-110%);
-  transition: transform .4s cubic-bezier(.4,0,.2,1);
-  gap: 1rem;
-}
-.action-bar.visible { transform: translateY(0); }
-.action-bar-links { display: flex; gap: .3rem; flex-wrap: wrap; }
-.action-bar-links a {
-  color: rgba(240,238,255,.5); text-decoration: none;
-  font-size: .75rem; font-weight: 600; letter-spacing: .06em;
-  text-transform: uppercase; padding: .38rem .85rem;
-  border-radius: 100px; border: 1px solid transparent;
-  transition: color .2s, border-color .2s, background .2s;
-  white-space: nowrap;
-}
-.action-bar-links a:hover {
-  color: #f0eeff;
-  border-color: rgba(255,255,255,.12);
-  background: rgba(255,255,255,.05);
-}
-.action-bar-wa {
-  display: inline-flex; align-items: center; gap: .5rem;
-  background: #25d366; color: #fff;
-  padding: .42rem 1.1rem; border-radius: 100px;
-  font-weight: 700; font-size: .75rem; text-decoration: none;
-  white-space: nowrap; flex-shrink: 0;
-  transition: background .2s, transform .15s;
-  box-shadow: 0 2px 12px rgba(37,211,102,.3);
-}
-.action-bar-wa:hover { background: #1db954; transform: scale(1.04); }
-
-/* VERSION SWITCHER */
-.version-switcher {
-  position: fixed; bottom: 1.6rem; right: 1.6rem; z-index: 300;
-  display: flex; align-items: center; gap: .5rem;
-  background: rgba(20,20,30,0.92);
-  border: 1px solid rgba(255,255,255,.12);
-  backdrop-filter: blur(16px);
-  padding: .55rem .55rem .55rem 1rem;
-  border-radius: 100px;
-  box-shadow: 0 8px 32px rgba(0,0,0,.4);
-  text-decoration: none;
-  transition: border-color .25s, box-shadow .25s, transform .25s;
-}
-.version-switcher:hover {
-  border-color: rgba(245,243,239,.3);
-  box-shadow: 0 12px 40px rgba(0,0,0,.5);
-  transform: translateY(-2px);
-}
-.vs-label {
-  font-size: .72rem; font-weight: 700; letter-spacing: .07em;
-  text-transform: uppercase; color: rgba(240,238,255,.5);
-  white-space: nowrap;
-}
-.vs-badge {
-  background: #f5f3ef; color: #0c0c14;
-  font-size: .72rem; font-weight: 800; letter-spacing: .05em;
-  text-transform: uppercase; padding: .32rem .85rem;
-  border-radius: 100px; white-space: nowrap;
-}
-
-@media (max-width: 640px) {
-  .action-bar { padding: .5rem 1.2rem; top: 52px; }
-  .action-bar-links a { font-size: .68rem; padding: .3rem .65rem; }
-}
-
-/* RESULTS BENTO */
-#results { background: var(--ink2); padding: 6rem 2rem; }
-.results-header { margin-bottom: 3rem; }
-.bento-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 1rem;
-}
-.bento-card {
-  background: var(--ink3);
-  border: 1px solid var(--border-dark);
-  border-radius: 20px; padding: 2.4rem 2.2rem;
-  position: relative; overflow: hidden;
-  transition: transform .35s, border-color .35s, box-shadow .35s;
-}
-.bento-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(218,119,86,.35);
-  box-shadow: 0 20px 60px rgba(0,0,0,.35);
-}
-.bento-card::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 80% 20%, rgba(218,119,86,.08) 0%, transparent 65%);
-  pointer-events: none; opacity: 0;
-  transition: opacity .35s;
-}
-.bento-card:hover::before { opacity: 1; }
-.bento-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(4rem, 7vw, 6.5rem);
-  line-height: 1; letter-spacing: -.02em;
-  color: var(--lime);
-  filter: drop-shadow(0 0 24px rgba(218,119,86,.35));
-  margin-bottom: .5rem;
-}
-.bento-label {
-  font-size: .88rem; font-weight: 500;
-  color: rgba(240,238,255,.45); line-height: 1.6;
-  max-width: 240px;
-}
-.bento-card.wide { grid-column: 1 / -1; }
-.bento-card.wide .bento-num { font-size: clamp(4.5rem, 9vw, 8rem); }
-.bento-card.wide .inner {
-  display: flex; align-items: flex-end;
-  justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-}
-.bento-card.wide .bento-label { font-size: 1rem; max-width: 360px; }
-.bento-badge {
-  display: inline-flex; align-items: center; gap: .4rem;
-  background: rgba(218,119,86,.12); border: 1px solid rgba(218,119,86,.25);
-  color: var(--lime); font-size: .68rem; font-weight: 700;
-  letter-spacing: .1em; text-transform: uppercase;
-  padding: .3rem .8rem; border-radius: 100px;
-  margin-bottom: 1rem;
-}
-.bento-badge-dot { width:6px; height:6px; border-radius:50%; background: var(--lime); }
-
-@media (max-width: 640px) {
-  .bento-grid { grid-template-columns: 1fr; }
-  .bento-card.wide .inner { flex-direction: column; }
-}
-
-/* PROCESS */
-#how { background: var(--ink); padding: 6rem 2rem; }
-.process-header { margin-bottom: 4rem; }
-
-/* TIMELINE */
-.timeline {
-  display: flex; align-items: flex-start;
-  position: relative; gap: 0;
-}
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 23px; left: calc(12.5%); right: calc(12.5%);
-  height: 2px;
-  background: linear-gradient(90deg, var(--lime), rgba(218,119,86,.3));
-  z-index: 0;
-}
-.tl-step {
-  flex: 1; display: flex; flex-direction: column;
-  align-items: center; position: relative; z-index: 1;
-  padding: 0 .75rem;
-}
-.tl-circle {
-  width: 48px; height: 48px; border-radius: 50%;
-  background: var(--lime); color: var(--ink);
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.2rem; font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 1.6rem; flex-shrink: 0;
-  box-shadow: 0 0 0 6px rgba(218,119,86,.12);
-  transition: transform .3s, box-shadow .3s;
-}
-.tl-step:hover .tl-circle {
-  transform: scale(1.12);
-  box-shadow: 0 0 0 10px rgba(218,119,86,.2), 0 8px 24px rgba(218,119,86,.4);
-}
-.tl-card {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.07);
-  border-radius: 16px; padding: 1.6rem 1.4rem;
-  width: 100%; text-align: left;
-  transition: background .3s, border-color .3s, transform .3s;
-}
-.tl-step:hover .tl-card {
-  background: rgba(218,119,86,.07);
-  border-color: rgba(218,119,86,.25);
-  transform: translateY(-4px);
-}
-.tl-badge {
-  display: inline-flex; align-items: center; gap: .35rem;
-  font-size: .65rem; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--lime);
-  margin-bottom: .75rem;
-}
-.tl-badge-dot {
-  width: 5px; height: 5px; border-radius: 50%;
-  background: var(--lime); flex-shrink: 0;
-}
-.tl-card h4 {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 700; font-size: 1rem;
-  margin-bottom: .5rem; color: #f0eeff;
-}
-.tl-card p { color: var(--muted); font-size: .83rem; line-height: 1.7; }
-.tl-icon { font-size: 1.4rem; margin-bottom: .6rem; display: block; }
-
-@media (max-width: 768px) {
-  .timeline { flex-direction: column; gap: 1rem; }
-  .timeline::before { display: none; }
-  .tl-step { flex-direction: row; align-items: flex-start; gap: 1rem; padding: 0; }
-  .tl-circle { margin-bottom: 0; flex-shrink: 0; }
-  .tl-card { flex: 1; }
-}
-
-/* DOR SECTION */
-#dor { background: var(--ink3); border-top: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); }
-.dor-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: center; }
-.dor-left h2 { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.4rem,5vw,4rem); line-height:.95; margin-bottom:1rem; }
-.dor-left h2 em { color:var(--lime); font-style:normal; }
-.dor-left p { color:var(--muted); font-size:.9rem; line-height:1.75; }
-.dor-list { display:flex; flex-direction:column; gap:.75rem; }
-.dor-item {
-  display:flex; align-items:flex-start; gap:1rem;
-  background:rgba(255,255,255,.03); border:1px solid var(--border-dark);
-  border-radius:14px; padding:1.2rem 1.4rem;
-  transition:border-color .3s, background .3s;
-}
-.dor-item:hover { border-color:rgba(218,119,86,.3); background:rgba(218,119,86,.04); }
-.dor-dot {
-  width:8px; height:8px; border-radius:50%;
-  background:var(--lime); flex-shrink:0; margin-top:.35rem;
-}
-.dor-item p { color:rgba(240,238,255,.6); font-size:.875rem; line-height:1.6; margin:0; }
-.dor-item strong { color:#f0eeff; display:block; font-size:.92rem; margin-bottom:.2rem; }
-@media(max-width:860px){ .dor-layout { grid-template-columns:1fr; gap:2.5rem; } }
-
-/* INSIGHT SECTION */
-#insight { background: var(--ink2); }
-.insight-header { text-align:center; max-width:680px; margin:0 auto 4rem; }
-.insight-header p { color:var(--muted); font-size:.95rem; line-height:1.75; margin-top:.8rem; }
-.insight-sectors {
-  display:flex; flex-wrap:wrap; justify-content:center; gap:.55rem; margin-top:1.4rem;
-}
-.insight-sector {
-  font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
-  padding:.32rem 1rem; border-radius:100px;
-  border:1px solid rgba(218,119,86,.3);
-  color:rgba(218,119,86,.85);
-  background:rgba(218,119,86,.07);
-  transition:background .2s, border-color .2s, color .2s;
-}
-.insight-sector:hover { background:rgba(218,119,86,.15); border-color:rgba(218,119,86,.55); color:#da7756; }
-.insight-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; }
-.insight-card {
-  background:rgba(255,255,255,.03); border:1px solid var(--border-dark);
-  border-radius:18px; padding:2rem 1.8rem;
-  display:flex; flex-direction:column; gap:1.2rem;
-  transition:border-color .35s, transform .35s, background .35s;
-}
-.insight-card:hover { border-color:rgba(218,119,86,.35); transform:translateY(-5px); background:rgba(218,119,86,.04); }
-.insight-arrow {
-  width:36px; height:36px; border-radius:50%;
-  background:rgba(218,119,86,.12); border:1px solid rgba(218,119,86,.25);
-  display:flex; align-items:center; justify-content:center;
-  font-size:.9rem; flex-shrink:0;
-}
-.insight-block { display:flex; flex-direction:column; gap:.3rem; }
-.insight-label {
-  font-size:.65rem; font-weight:700; letter-spacing:.12em;
-  text-transform:uppercase; color:var(--muted);
-}
-.insight-label.is-real { color:var(--lime); }
-.insight-text { font-size:.92rem; line-height:1.55; color:rgba(240,238,255,.75); }
-.insight-text.is-real { color:#f0eeff; font-weight:600; }
-.insight-sep {
-  border:none; border-top:1px solid var(--border-dark); margin:0;
-}
-@media(max-width:860px){ .insight-grid { grid-template-columns:1fr; } }
-
-/* CTA */
-#cta { background: var(--ink); position: relative; overflow: hidden; }
-#cta::before {
-  content:'QUAL PROBLEMA\APOSSO RESOLVER?';
-  position:absolute; font-family:'Bebas Neue',sans-serif;
-  font-size:12vw; line-height:.85;
-  color:rgba(255,255,255,.02);
-  top:50%; left:50%; transform:translate(-50%,-50%);
-  white-space:pre; text-align:center; pointer-events:none; letter-spacing:.02em;
-}
-.cta-inner { max-width:700px; margin:0 auto; text-align:center; position:relative; z-index:1; }
-.cta-inner .section-label { margin-bottom:1rem; color:var(--muted); }
-.cta-inner h2 {
-  font-family:'Bebas Neue',sans-serif;
-  font-size:clamp(3rem,8vw,6.5rem);
-  line-height:.92; letter-spacing:.02em; margin-bottom:1.2rem;
-}
-.cta-inner h2 .outline { -webkit-text-stroke:2px #f0eeff; color:transparent; }
-.cta-inner p { color:rgba(240,238,255,.45); font-size:.97rem; line-height:1.75; max-width:400px; margin:0 auto 2.8rem; }
-.wa-big {
-  display:inline-flex; align-items:center; gap:.8rem;
-  background:#25d366; color:#fff;
-  padding:1.1rem 2.5rem; border-radius:100px;
-  font-weight:800; font-size:1.02rem; text-decoration:none;
-  box-shadow:0 8px 40px rgba(37,211,102,0.4);
-  transition:transform .25s, box-shadow .25s;
-}
-.wa-big:hover { transform:translateY(-4px) scale(1.02); box-shadow:0 16px 60px rgba(37,211,102,0.5); }
-
-/* FOOTER */
-footer {
-  background:var(--ink); border-top:1px solid var(--border-dark);
-  padding:1.8rem 3rem;
-  display:flex; align-items:center; justify-content:space-between;
-  flex-wrap:wrap; gap:1rem;
-}
-.foot-logo { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:.06em; }
-.foot-logo span { color:var(--lime); }
-footer p { color:var(--muted); font-size:.78rem; }
-
-/* REVEAL */
-.reveal { opacity:0; transform:translateY(30px); transition:opacity .7s ease, transform .7s ease; }
-.reveal.visible { opacity:1; transform:translateY(0); }
-
-/* RESPONSIVE */
-@media (max-width:900px) {
-  nav { padding:1rem 1.5rem; }
-  .nav-links { display:none; }
-  section { padding:4.5rem 1.5rem; }
-  .hero { padding:7rem 1.2rem 4rem; }
-  .svc-grid { grid-template-columns:1fr; }
-  .stats-grid { grid-template-columns:1fr 1fr; }
-  .process-steps { grid-template-columns:1fr 1fr; }
-  .project-row, .project-row.flip { grid-template-columns:1fr; }
-  .project-row.flip .proj-visual, .project-row.flip .proj-info { order:unset; }
-  .svc-header, .port-header { flex-direction:column; align-items:flex-start; }
-  .about-row { flex-direction:column; align-items:flex-start; }
-  .pharma-icon { display:none; }
-  footer { justify-content:center; text-align:center; }
-}
-@media (max-width:540px) {
-  .stats-grid, .process-steps { grid-template-columns:1fr; }
-  .hero h1 { font-size:clamp(2.8rem,12vw,5rem); }
-  .hero-previews { gap:.5rem; }
-  .preview-card { width:88px; }
-}
-
-/* =====================
-   LIGHT THEME OVERRIDES
-   ===================== */
-body.light {
-  --ink: #f5f3ef;
-  --ink2: #edeae5;
-  --ink3: #e5e1db;
-  --muted: #7a7060;
-  --border-dark: rgba(12,12,20,0.1);
-  background: var(--ink);
-  color: #0c0c14;
-}
-body.light nav {
-  background: rgba(245,243,239,0.92);
-  border-bottom-color: rgba(12,12,20,0.1);
-}
-body.light .nav-links a { color: rgba(12,12,20,.5); }
-body.light .nav-links a:hover { color: #0c0c14; }
-body.light .action-bar {
-  background: rgba(245,243,239,0.96);
-  border-bottom-color: rgba(218,119,86,.2);
-}
-body.light .action-bar-links a { color: rgba(12,12,20,.5); }
-body.light .action-bar-links a:hover { color: #0c0c14; background: rgba(12,12,20,.05); border-color: rgba(12,12,20,.12); }
-body.light .hero-sub { color: rgba(12,12,20,.5); }
-body.light .hero h1 .outline { -webkit-text-stroke-color: #0c0c14; }
-body.light .btn-ghost-w { color: rgba(12,12,20,.6); border-color: rgba(12,12,20,.15); }
-body.light .btn-ghost-w:hover { color: #0c0c14; }
-body.light .glow-1 { background: radial-gradient(circle, rgba(218,119,86,0.08) 0%, transparent 70%); }
-
-/* Services */
-body.light #services { color: #0c0c14; }
-body.light .svc-header h2.sec-title { color: #0c0c14; }
-body.light .svc-header .sub { color: rgba(12,12,20,.5); }
-body.light .svc-item { background: rgba(12,12,20,.04); border-color: rgba(12,12,20,.1); }
-body.light .svc-item:hover { background: rgba(12,12,20,.07); border-color: rgba(218,119,86,.3); }
-body.light .svc-n { color: rgba(12,12,20,.25); }
-body.light .svc-item h3 { color: #0c0c14; }
-body.light .svc-item p { color: rgba(12,12,20,.5); }
-body.light .svc-result { border-top-color: rgba(12,12,20,.08); }
-body.light .svc-icon-wrap { background: rgba(218,119,86,.1); border-color: rgba(218,119,86,.2); }
-
-/* Portfolio */
-body.light .sc-main, body.light .sc-side, body.light .proj-single { border-color: rgba(12,12,20,.12); }
-body.light .proj-info p { color: rgba(12,12,20,.5); }
-body.light .chip { background: rgba(12,12,20,.06); border-color: rgba(12,12,20,.1); color: rgba(12,12,20,.6); }
-body.light .proj-pharma { background: var(--ink3); border-color: rgba(12,12,20,.1); }
-body.light .pharma-text p { color: rgba(12,12,20,.45); }
-body.light .bot-phone { border-color: rgba(12,12,20,.12); }
-
-/* About */
-body.light .about-desc { color: rgba(12,12,20,.5); }
-
-/* Results / Bento */
-body.light .bento-card { background: var(--ink3); border-color: rgba(12,12,20,.1); }
-body.light .bento-label { color: rgba(12,12,20,.5); }
-
-/* Process / Timeline */
-body.light .tl-card { background: rgba(12,12,20,.04); border-color: rgba(12,12,20,.08); }
-body.light .tl-step:hover .tl-card { background: rgba(218,119,86,.07); border-color: rgba(218,119,86,.25); }
-body.light .tl-card h4 { color: #0c0c14; }
-
-/* Dor */
-body.light .dor-item p { color: rgba(12,12,20,.6); }
-body.light .dor-item strong { color: #0c0c14; }
-
-/* Insight */
-body.light .insight-card { background: rgba(12,12,20,.03); border-color: rgba(12,12,20,.1); }
-body.light .insight-card:hover { background: rgba(218,119,86,.04); }
-body.light .insight-text { color: rgba(12,12,20,.75); }
-body.light .insight-text.is-real { color: #0c0c14; }
-body.light .insight-sep { border-top-color: rgba(12,12,20,.1); }
-
-/* CTA */
-body.light #cta h2 .outline { -webkit-text-stroke-color: #0c0c14; }
-body.light #cta p { color: rgba(12,12,20,.5); }
-body.light #cta::before { background: radial-gradient(circle, rgba(218,119,86,0.08) 0%, transparent 60%); }
-
-/* Footer */
-body.light footer { background: var(--ink); border-top-color: rgba(12,12,20,.1); }
-body.light .footer-copy { color: rgba(12,12,20,.3); }
-
-/* THEME TOGGLE BUTTON */
-.theme-toggle {
-  position: fixed; bottom: 1.6rem; right: 1.6rem; z-index: 400;
-  display: flex; align-items: center; gap: .6rem;
-  padding: .55rem .55rem .55rem 1.1rem;
-  border-radius: 100px; border: none; cursor: pointer;
-  background: rgba(20,20,30,0.9); border: 1px solid rgba(255,255,255,.12);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 8px 32px rgba(0,0,0,.35);
-  transition: transform .25s, box-shadow .25s, background .3s, border-color .3s;
-  font-family: 'Manrope', sans-serif;
-}
-.theme-toggle:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,.4); }
-.tt-label {
-  font-size: .72rem; font-weight: 700; letter-spacing: .07em;
-  text-transform: uppercase; color: rgba(240,238,255,.5);
-  white-space: nowrap; transition: color .3s;
-}
-.tt-pill {
-  display: flex; align-items: center; gap: .4rem;
-  background: #DA7756; color: #fff;
-  padding: .3rem .85rem; border-radius: 100px;
-  font-size: .72rem; font-weight: 800; letter-spacing: .04em;
-  text-transform: uppercase; white-space: nowrap; transition: background .3s;
-}
-body.light .theme-toggle {
-  background: rgba(245,243,239,0.92); border-color: rgba(12,12,20,.12);
-  box-shadow: 0 8px 32px rgba(0,0,0,.12);
-}
-body.light .theme-toggle:hover { box-shadow: 0 12px 40px rgba(0,0,0,.18); }
-body.light .tt-label { color: rgba(12,12,20,.45); }
-body.light .tt-pill { background: #0c0c14; color: #c8f135; }
-</style>
+   Não existe mais guarda contra lampejo de idioma: o inglês sai pronto
+   do servidor em en.html, então não há troca de texto para esconder. */
+(function () {
+  var d = document.documentElement;
+  /* Só com esta classe o CSS esconde as seções para revelá-las na rolagem.
+     Sem JavaScript, elas continuam visíveis em vez de sumirem para sempre. */
+  d.className += ' js';
+  try {
+    var tema = localStorage.getItem('bcr-tema');
+    if (tema === 'light' || tema === 'dark') d.setAttribute('data-theme', tema);
+  } catch (e) { /* aba privativa: segue no tema do sistema */ }
+})();
+</script>
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
+<a class="pular" href="#conteudo" data-i18n="nav.pular">Pular para o conteúdo</a>
 
-<!-- THEME TOGGLE -->
-<button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-  <span class="tt-label">Tema</span>
-  <span class="tt-pill" id="ttPill">☀ Light</span>
-</button>
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="nav-in">
+    <a class="marca" href="/">Beatriz C<span class="ponto">.</span> Reis</a>
 
-<!-- FLOATING CTA -->
-<!-- STICKY ACTION BAR -->
-<div class="action-bar" id="actionBar">
-  <div class="action-bar-links">
-    <a href="#dor">Diagnóstico</a>
-    <a href="#insight">Como eu penso</a>
-    <a href="#services">Serviços</a>
-    <a href="#portfolio">Projetos</a>
-    <a href="#about">Sobre</a>
-    <a href="#how">Processo</a>
-  </div>
-  <a href="https://wa.me/5521997235209" class="action-bar-wa" target="_blank">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-    Falar no WhatsApp
-  </a>
-</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#trabalho" data-i18n="nav.trabalho">Trabalho</a></li>
+        <li><a href="#metodo"   data-i18n="nav.metodo">Método</a></li>
+        <li><a href="#perfil"   data-i18n="nav.perfil">Perfil</a></li>
+        <li><a href="#contato"  data-i18n="nav.contato">Contato</a></li>
+      </ul>
+    </nav>
 
-<!-- NAV -->
-<nav>
-  <div class="logo">bea<span>.</span>tech</div>
-  <ul class="nav-links">
-    <li><a href="#services">Serviços</a></li>
-    <li><a href="#portfolio">Projetos</a></li>
-    <li><a href="#about">Sobre</a></li>
-    <li><a href="#how">Processo</a></li>
-  </ul>
-  <a href="https://wa.me/5521997235209" class="nav-pill" target="_blank">Falar agora →</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="glow-1"></div>
-  <div class="glow-2"></div>
-
-  <div class="hero-eyebrow">
-    <div class="eyebrow-line"></div>
-    Para quem não aguenta mais perder venda
-  </div>
-
-  <h1>
-    VOCÊ TEM UM<br>
-    <span class="lime">GARGALO.</span><br>
-    <span class="outline">EU ACABO COM ELE.</span>
-  </h1>
-
-  <p class="hero-sub">
-    Perda de vendas, clientes sumindo, problemas que ninguém resolve — entendo seu negócio fundo o suficiente para ver o que está freando seu crescimento e criar a solução que você não sabia que precisava.
-  </p>
-
-
-
-  <div class="hero-btns">
-    <a href="#portfolio" class="btn-lime">Ver projetos →</a>
-    <a href="#cta" class="btn-ghost-w">Quero meu projeto</a>
-  </div>
-</section>
-
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker">
-    <span class="ticker-item">Sites profissionais</span><span class="ticker-item">✦</span><span class="ticker-item">Bots no WhatsApp</span><span class="ticker-item">✦</span><span class="ticker-item">Dashboards financeiros</span><span class="ticker-item">✦</span><span class="ticker-item">Automações inteligentes</span><span class="ticker-item">✦</span><span class="ticker-item">Ferramentas para representantes</span><span class="ticker-item">✦</span><span class="ticker-item">Sites profissionais</span><span class="ticker-item">✦</span><span class="ticker-item">Bots no WhatsApp</span><span class="ticker-item">✦</span><span class="ticker-item">Dashboards financeiros</span><span class="ticker-item">✦</span><span class="ticker-item">Automações inteligentes</span><span class="ticker-item">✦</span><span class="ticker-item">Ferramentas para representantes</span><span class="ticker-item">✦</span><span class="ticker-item">Sites profissionais</span><span class="ticker-item">✦</span><span class="ticker-item">Bots no WhatsApp</span><span class="ticker-item">✦</span><span class="ticker-item">Dashboards financeiros</span><span class="ticker-item">✦</span><span class="ticker-item">Automações inteligentes</span><span class="ticker-item">✦</span><span class="ticker-item">Ferramentas para representantes</span><span class="ticker-item">✦</span><span class="ticker-item">Sites profissionais</span><span class="ticker-item">✦</span><span class="ticker-item">Bots no WhatsApp</span><span class="ticker-item">✦</span><span class="ticker-item">Dashboards financeiros</span><span class="ticker-item">✦</span><span class="ticker-item">Automações inteligentes</span><span class="ticker-item">✦</span><span class="ticker-item">Ferramentas para representantes</span><span class="ticker-item">✦</span>
-  </div>
-</div>
-
-<!-- DOR -->
-<section id="dor">
-  <div class="container">
-    <div class="dor-layout">
-      <div class="dor-left reveal">
-        <div class="section-label">O diagnóstico</div>
-        <h2>SEU NEGÓCIO<br>ESTÁ <em>SANGRANDO</em><br>POR AQUI.</h2>
-        <p style="margin-top:1rem;">Você sabe que tem um problema. Quase ninguém sabe onde ele está.</p>
+    <div class="controles">
+      <div class="idioma" role="group" aria-label="Idioma" data-i18n-rotulo="nav.idioma">
+        <a href="/"   data-idioma="pt" hreflang="pt-BR" aria-current="true">PT</a>
+        <a href="/en" data-idioma="en" hreflang="en">EN</a>
       </div>
-      <div class="dor-list reveal">
-        <div class="dor-item">
-          <div class="dor-dot"></div>
-          <div>
-            <strong>Gargalo de vendas que não sai do lugar</strong>
-            <p>As vendas param e os clientes somem — sem você saber onde.</p>
-          </div>
-        </div>
-        <div class="dor-item">
-          <div class="dor-dot"></div>
-          <div>
-            <strong>Problemas que viram bola de neve</strong>
-            <p>Um erro pequeno vira atraso, queima cliente e mancha reputação.</p>
-          </div>
-        </div>
-        <div class="dor-item">
-          <div class="dor-dot"></div>
-          <div>
-            <strong>Tentou resolver. Não funcionou.</strong>
-            <p>Testou, contratou, reorganizou. O ciclo continua.</p>
-          </div>
-        </div>
-        <div class="dor-item">
-          <div class="dor-dot"></div>
-          <div>
-            <strong>Cada dia parado é dinheiro perdido</strong>
-            <p>Vendas escorrem. Clientes não voltam. Concorrentes avançam.</p>
-          </div>
-        </div>
-      </div>
+      <button class="tema" id="btnTema" type="button"
+              aria-label="Alternar tema claro e escuro" data-i18n-rotulo="nav.tema">☾</button>
     </div>
   </div>
-</section>
+</header>
 
-<!-- INSIGHT -->
-<section id="insight">
-  <div class="container">
-    <div class="insight-header reveal">
-      <div class="section-label">O que eu enxergo</div>
-      <h2 class="sec-title">O QUE VOCÊ VÊ.<br><span style="color:var(--lime)">O QUE EU VEJO.</span></h2>
-      <p>A maioria chega com um pedido. Eu chego com um diagnóstico. Porque o problema que aparece raramente é o problema real.</p>
-      <div class="insight-sectors">
-        <span class="insight-sector">Clínicas</span>
-        <span class="insight-sector">Varejo</span>
-        <span class="insight-sector">Imobiliário</span>
-        <span class="insight-sector">Advocacia</span>
-        <span class="insight-sector">Farmacêutico</span>
-      </div>
-    </div>
-    <div class="insight-grid reveal">
+<main id="conteudo">
+<div class="shell">
 
-      <div class="insight-card">
-        <div class="insight-block">
-          <span class="insight-label">O que você vê</span>
-          <span class="insight-text">"Meu profissional não sabe orientar o paciente na compra do produto certo."</span>
-        </div>
-        <hr class="insight-sep">
-        <div class="insight-arrow">→</div>
-        <div class="insight-block">
-          <span class="insight-label is-real">O que eu vejo</span>
-          <span class="insight-text is-real">Gargalo de conversão no momento exato da decisão de compra. A venda trava porque a informação certa não chega na hora certa.</span>
-        </div>
-        <div class="insight-block" style="background:rgba(218,119,86,.07);border:1px solid rgba(218,119,86,.2);border-radius:10px;padding:.9rem 1rem;">
-          <span class="insight-label is-real">O que criei</span>
-          <span class="insight-text" style="font-size:.83rem;">Calculadora online: profissional digita a peculiaridade do paciente → sistema indica exatamente como orientar a compra. Zero dúvida. Venda fechada.</span>
-        </div>
-      </div>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <p class="hero-topo"><span class="ponto-vivo" aria-hidden="true"></span><span data-i18n="hero.hoje">Hoje: operação comercial · indústria farmacêutica</span></p>
 
-      <div class="insight-card">
-        <div class="insight-block">
-          <span class="insight-label">O que você vê</span>
-          <span class="insight-text">"Perco muito tempo respondendo as mesmas perguntas de clientes."</span>
-        </div>
-        <hr class="insight-sep">
-        <div class="insight-arrow">→</div>
-        <div class="insight-block">
-          <span class="insight-label is-real">O que eu vejo</span>
-          <span class="insight-text is-real">80% do seu atendimento é previsível e repetível. Seu tempo vale caro demais para isso. O problema não é o volume — é que não existe automação.</span>
-        </div>
-        <div class="insight-block" style="background:rgba(218,119,86,.07);border:1px solid rgba(218,119,86,.2);border-radius:10px;padding:.9rem 1rem;">
-          <span class="insight-label is-real">O que criei</span>
-          <span class="insight-text" style="font-size:.83rem;">Bot no WhatsApp que atende, qualifica e agenda 24h — sem você ser acionado. Só chega até você o cliente pronto para fechar.</span>
-        </div>
-      </div>
+    <h1 data-i18n="hero.nome">Beatriz C. Reis</h1>
 
-      <div class="insight-card">
-        <div class="insight-block">
-          <span class="insight-label">O que você vê</span>
-          <span class="insight-text">"Preciso de um site / sistema para organizar meu negócio."</span>
-        </div>
-        <hr class="insight-sep">
-        <div class="insight-arrow">→</div>
-        <div class="insight-block">
-          <span class="insight-label is-real">O que eu vejo</span>
-          <span class="insight-text is-real">Você precisa de uma máquina de vendas, não de um site. A tecnologia é o meio — o objetivo é mais clientes, mais conversão, menos desperdício.</span>
-        </div>
-        <div class="insight-block" style="background:rgba(218,119,86,.07);border:1px solid rgba(218,119,86,.2);border-radius:10px;padding:.9rem 1rem;">
-          <span class="insight-label is-real">O que eu entrego</span>
-          <span class="insight-text" style="font-size:.83rem;">A solução que resolve o problema real do seu negócio — não necessariamente o que você pediu, mas o que você precisa.</span>
-        </div>
-      </div>
+    <p class="hero-papeis">
+      <span data-i18n="hero.papel1">Gestão de projetos</span>
+      <span data-i18n="hero.papel2">IA aplicada</span>
+      <span data-i18n="hero.papel3">Desenvolvimento full-stack</span>
+      <span data-i18n="hero.papel4">Indústria farmacêutica</span>
+    </p>
 
-    </div>
-  </div>
-</section>
+    <p class="hero-lead" data-i18n-html="hero.lead1.html">Eu não estudo o problema de fora. <strong>Trabalho dentro da operação comercial da indústria farmacêutica</strong> — e construo o software que aquela operação precisa. Cada produto desta página nasceu de uma dor que eu mesma tinha que resolver no fim do expediente.</p>
+    <p class="hero-lead" data-i18n-html="hero.lead2.html">Sete produtos entregues, três deles no ar. <strong>Dois abrem direto no navegador, sem cadastro nenhum</strong>; o terceiro roda em conta privada, e o porquê disso está escrito lá embaixo. Todos escritos à mão, todos rodando a custo zero, todos com o núcleo determinístico e a IA fora do caminho crítico — porque produto que só funciona quando a chave de API responde não é produto.</p>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="svc-header reveal">
-      <div>
-        <div class="section-label">Como eu resolvo</div>
-        <h2 class="sec-title">TECNOLOGIA A<br>SERVIÇO DO SEU<br>RESULTADO</h2>
-      </div>
-      <p class="sub">Não entrego tecnologia. Entrego resultado. A ferramenta é consequência do problema que precisa ser resolvido.</p>
-    </div>
-    <div class="svc-grid reveal">
-      <div class="svc-item">
-        <span class="svc-n">01</span>
-        <div class="svc-icon-wrap">🌐</div>
-        <h3>Sites & Landing Pages</h3>
-        <p>Presença digital que converte visitas em clientes. Design moderno, rápido e otimizado para mobile.</p>
-        <span class="svc-result">Mais visibilidade, mais contatos</span>
-      </div>
-      <div class="svc-item">
-        <span class="svc-n">02</span>
-        <div class="svc-icon-wrap">📊</div>
-        <h3>Dashboards & Ferramentas Web</h3>
-        <p>Sistemas para organizar dados e tomar decisões — financeiro, gestão de rotas, métricas de negócio.</p>
-        <span class="svc-result">Decisões mais rápidas e precisas</span>
-      </div>
-      <div class="svc-item">
-        <span class="svc-n">03</span>
-        <div class="svc-icon-wrap">⚙️</div>
-        <h3>Automações de Negócio</h3>
-        <p>Elimine tarefas repetitivas. Fluxos automáticos que economizam horas e reduzem erros humanos.</p>
-        <span class="svc-result">Horas recuperadas por semana</span>
-      </div>
-      <div class="svc-item">
-        <span class="svc-n">04</span>
-        <div class="svc-icon-wrap">🤖</div>
-        <h3>Bot Assistente no WhatsApp</h3>
-        <p>IA que atende, qualifica e agenda 24h por dia — só chega até você o cliente pronto para fechar.</p>
-        <span class="svc-result">Atendimento 24h sem você</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <div class="container">
-    <div class="port-header reveal">
-      <div>
-        <div style="font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem">Problemas resolvidos</div>
-        <h2 class="sec-title">O PROBLEMA<br>REAL. A SOLUÇÃO<br>ALÉM DO ÓBVIO.</h2>
-      </div>
-      <p class="sub">Cada projeto começou com um pedido. O que foi entregue resolveu o problema que estava por trás dele.</p>
-    </div>
-
-    <!-- Rep.Rota -->
-    <div class="project-row reveal">
-      <div class="proj-visual">
-        <div class="screens-wrap">
-          <div class="sc-main">
-            <img src="img/rep-rota-painel.jpg" alt="Rep.Rota Painel" />
-          </div>
-          <div class="sc-side">
-            <img src="img/rep-rota-login.jpg" alt="Rep.Rota Login" />
-          </div>
-        </div>
-      </div>
-      <div class="proj-info">
-        <div class="proj-num">Projeto 01</div>
-        <div class="proj-tag">📍 SaaS · Gestão · Representantes</div>
-        <h3>REP.ROTA —<br>GESTÃO DE ROTAS</h3>
-        <p>Sistema completo para representantes comerciais, consultores de vendas e consultores médicos gerenciarem sua carteira de clientes, roteiros de visitas e ciclos. Com mapa inteligente, categorização por potencial e agenda integrada — tudo em um único painel, acessível de qualquer dispositivo.</p>
-        <div class="feat-chips">
-          <span class="chip">Representantes comerciais</span>
-          <span class="chip">Consultores médicos</span>
-          <span class="chip">Mapa inteligente</span>
-          <span class="chip">Agenda de ciclos</span>
-          <span class="chip">Multi-usuário</span>
-          <span class="chip">Filtros avançados</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Finances Control -->
-    <div class="project-row flip reveal">
-      <div class="proj-info">
-        <div class="proj-num">Projeto 02</div>
-        <div class="proj-tag">💰 Finanças · Dashboard · Família</div>
-        <h3>FINANCES CONTROL —<br>ORGANIZAÇÃO FINANCEIRA</h3>
-        <p>Aplicativo de controle financeiro com dashboard visual e diagnóstico inteligente por categorias. Mostra em tempo real onde o dinheiro vai, sinaliza gastos críticos, acompanha metas de poupança e exibe o orçamento mensal — para quem quer organizar as finanças sem complicação.</p>
-        <div class="feat-chips">
-          <span class="chip">Dashboard & diagnóstico</span>
-          <span class="chip">Alertas críticos</span>
-          <span class="chip">Cofrinho com meta</span>
-          <span class="chip">Multi-usuário</span>
-        </div>
-      </div>
-      <div class="proj-visual">
-        <div class="proj-single">
-          <img src="img/finances-control-dashboard.jpg" alt="Finances Control Dashboard" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Bot Assistente -->
-    <div class="project-row reveal">
-      <div class="proj-visual">
-        <div class="bot-phone-wrap">
-          <div class="bot-phone">
-            <div class="bot-live-badge">
-              <div class="live-dot"></div>
-              Ao vivo agora
-            </div>
-            <img src="img/bot-assistente-virtual-whatsapp.jpg" alt="Bot Assistente Virtual WhatsApp" />
-          </div>
-        </div>
-      </div>
-      <div class="proj-info">
-        <div class="proj-num">Projeto 03</div>
-        <div class="proj-tag">🤖 IA · WhatsApp · Atendimento 24h · Ferramenta Clínica</div>
-        <h3>BOT ASSISTENTE —<br>SECRETARIA VIRTUAL</h3>
-        <p>Assistente inteligente no WhatsApp que atende pacientes e clientes a qualquer hora, tira dúvidas, coleta informações e agenda consultas — sem intervenção humana. Resultado direto: mais clientes captados, agenda sempre cheia e zero tempo perdido com atendimentos manuais.</p>
-        <div class="feat-chips">
-          <span class="chip">Atendimento 24h/7</span>
-          <span class="chip">Captação automática</span>
-          <span class="chip">Agenda de consultas</span>
-          <span class="chip">IA conversacional</span>
-          <span class="chip">WhatsApp nativo</span>
-          <span class="chip">Clínicas e consultórios</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Projeto Pharma -->
-    <div class="project-row reveal" style="border-bottom:1px solid var(--border-dark); padding-bottom:3.5rem;">
-      <div class="proj-pharma">
-        <div class="pharma-icon">💊</div>
-        <div class="pharma-text">
-          <div class="proj-tag">⚕️ Pharma · Ferramenta Clínica · Confidencial</div>
-          <h3>PROJETO PHARMA — NDA</h3>
-          <p>Solução web desenvolvida exclusivamente para uma grande empresa farmacêutica. A ferramenta apoia profissionais de saúde na tomada de decisão clínica, resultando em aumento direto de vendas e engajamento da força de representantes. Detalhes disponíveis mediante assinatura de NDA.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="about-row reveal">
-      <div class="about-avatar">
-        <img src="img/beatriz-reis.jpg" alt="Beatriz Reis" />
-      </div>
-      <div class="about-info">
-        <div class="about-eyebrow">Por que sou diferente</div>
-        <h3>EU NÃO FAÇO<br><span>O QUE VOCÊ PEDE.</span></h3>
-        <div class="about-badges">
-          <span class="about-badge">Pós-grad. Marketing & Comunicação</span>
-          <span class="about-badge">IA Manager</span>
-          <span class="about-badge">Project Manager</span>
-          <span class="about-badge">Pharma & Tech</span>
-        </div>
-        <p class="about-desc">Eu não faço apenas o que você vê e pede. Entendo seu negócio fundo o suficiente para ver o problema real — não o sintoma que você trouxe. O que eu entrego raramente é exatamente o que foi pedido. É o que resolve de verdade.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section id="results">
-  <div class="container">
-    <div class="results-header reveal">
-      <div class="section-label">Impacto</div>
-      <h2 class="sec-title">NÚMEROS QUE<br>NÃO MENTEM.</h2>
-    </div>
-    <div class="bento-grid reveal">
-
-      <!-- Card largo: -80% -->
-      <div class="bento-card wide">
-        <div class="inner">
-          <div>
-            <div class="bento-badge"><span class="bento-badge-dot"></span>Automações</div>
-            <div class="bento-num" data-count="80" data-prefix="-" data-suffix="%">-80%</div>
-            <div class="bento-label">Redução em tarefas manuais com automações inteligentes</div>
-          </div>
-          <div class="bento-label" style="font-size:.78rem; color:rgba(240,238,255,.25); max-width:220px; text-align:right;">
-            Horas que voltam para o que importa de verdade
-          </div>
-        </div>
-      </div>
-
-      <!-- Card: 24H -->
-      <div class="bento-card">
-        <div class="bento-badge"><span class="bento-badge-dot"></span>Atendimento</div>
-        <div class="bento-num" data-count="24" data-suffix="H">24H</div>
-        <div class="bento-label">Bot atendendo e captando clientes sem parar, todos os dias</div>
-      </div>
-
-      <!-- Card: 48H -->
-      <div class="bento-card">
-        <div class="bento-badge"><span class="bento-badge-dot"></span>Velocidade</div>
-        <div class="bento-num" data-count="48" data-suffix="H">48H</div>
-        <div class="bento-label">Prazo médio para entregar um MVP funcional e testável</div>
-      </div>
-
-      <!-- Card: 3× -->
-      <div class="bento-card wide">
-        <div class="inner">
-          <div>
-            <div class="bento-badge"><span class="bento-badge-dot"></span>Conversão</div>
-            <div class="bento-num" data-count="3" data-suffix="×">3×</div>
-            <div class="bento-label">Mais conversões com sistemas otimizados para resultado</div>
-          </div>
-          <div class="bento-label" style="font-size:.78rem; color:rgba(240,238,255,.25); max-width:220px; text-align:right;">
-            Mais clientes, mesma audiência
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="how">
-  <div class="container">
-    <div class="process-header reveal">
-      <div class="section-label">Processo</div>
-      <h2 class="sec-title">DO ZERO AO AR<br>SEM BUROCRACIA.</h2>
-    </div>
-    <div class="timeline reveal">
-
-      <div class="tl-step">
-        <div class="tl-circle">01</div>
-        <div class="tl-card">
-          <span class="tl-icon">💬</span>
-          <div class="tl-badge"><span class="tl-badge-dot"></span>Dia 1</div>
-          <h4>Conversa gratuita</h4>
-          <p>Você conta o que precisa. Sem formulário — direto no WhatsApp. Já saio com clareza do problema.</p>
-        </div>
-      </div>
-
-      <div class="tl-step">
-        <div class="tl-circle">02</div>
-        <div class="tl-card">
-          <span class="tl-icon">📋</span>
-          <div class="tl-badge"><span class="tl-badge-dot"></span>Em 24h</div>
-          <h4>Proposta objetiva</h4>
-          <p>Escopo, prazo e valor claros. Sem surpresas no meio do caminho. Você aprova e a gente começa.</p>
-        </div>
-      </div>
-
-      <div class="tl-step">
-        <div class="tl-circle">03</div>
-        <div class="tl-card">
-          <span class="tl-icon">⚡</span>
-          <div class="tl-badge"><span class="tl-badge-dot"></span>Dias 2–7</div>
-          <h4>Desenvolvimento ágil</h4>
-          <p>Você acompanha em tempo real. Iteramos juntos até ficar exato. Nada de sumiço.</p>
-        </div>
-      </div>
-
-      <div class="tl-step">
-        <div class="tl-circle">04</div>
-        <div class="tl-card">
-          <span class="tl-icon">🚀</span>
-          <div class="tl-badge"><span class="tl-badge-dot"></span>No prazo</div>
-          <h4>Entrega + suporte</h4>
-          <p>No ar e funcionando. Suporte disponível após a entrega — você não fica na mão.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section id="cta">
-  <div class="container">
-    <div class="cta-inner reveal">
-      <div class="section-label">Próximo passo</div>
-      <h2>O GARGALO<br><span class="outline">ACABA</span><br>HOJE.</h2>
-      <p>Me conta o problema — não o pedido. Em 15 minutos de conversa já consigo enxergar onde está o gargalo e o que pode ser feito. Sem compromisso, sem formulário.</p>
-      <a href="https://wa.me/5521997235209?text=Ol%C3%A1+Beatriz%21+Vi+seu+portf%C3%B3lio+e+quero+conversar+sobre+um+projeto." class="wa-big" target="_blank">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        Falar no WhatsApp agora
+    <div class="hero-acoes">
+      <a class="btn btn-forte" href="#trabalho">
+        <span data-i18n="hero.btn1">Ver o trabalho</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
+      <a class="btn btn-leve" href="#contato">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        <span data-i18n="hero.btn2">Falar comigo</span>
       </a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
+  <!-- ===================== TRABALHO ===================== -->
+  <section class="secao" id="trabalho">
+    <div class="secao-cab revelar">
+      <p class="rotulo"><span data-i18n="trab.rotulo">01 — Trabalho selecionado</span></p>
+      <h2 data-i18n="trab.titulo">Sete problemas. Sete sistemas.</h2>
+      <p class="prosa" data-i18n="trab.lead">Cada entrada traz o problema, a decisão técnica que mais pesou e o que dá para conferir. Onde há link, ele abre o produto rodando — não um vídeo de demonstração.</p>
+    </div>
+
+    <!-- 01 · Personal Assistant -->
+    <article class="obra revelar">
+      <div class="obra-rail">
+        <div class="obra-indice" aria-hidden="true">01</div>
+        <span class="selo selo-privado" data-i18n="selo.privado">No ar · conta privada</span>
+      </div>
+      <div class="obra-corpo">
+        <h3 data-i18n="o1.nome">Personal Assistant</h3>
+        <p class="obra-tese" data-i18n="o1.tese">Prazo que só existe na cabeça é prazo perdido.</p>
+        <p data-i18n="o1.desc">Assistente pessoal de prazos. Você manda um recado por texto ou por áudio — «consulta com a Ana sexta às 14h» — e o sistema lê a data, agenda a escada de avisos que você escolheu (2 dias, 1 dia, 1 hora, 15 minutos) e notifica na tela de bloqueio do celular, com o app fechado.</p>
+
+        <div class="obra-decisoes">
+          <p class="rotulo"><span data-i18n="obra.decisoes">Decisões que importaram</span></p>
+          <ul>
+            <li data-i18n-html="o1.d1.html"><strong>A IA não está no caminho crítico.</strong> Quem lê a data é um interpretador de português escrito à mão, determinístico e gratuito, que cobre «sexta às 14h», «dia 20», «amanhã de manhã» e «em duas semanas». A Claude API só entra quando o recado não tem data reconhecível, e uma variável de ambiente desliga a IA por completo. Sem chave nenhuma, o app funciona inteiro.</li>
+            <li data-i18n-html="o1.d2.html"><strong>A retirada do aviso da fila é atômica no banco.</strong> <code>DELETE … RETURNING</code> com <code>FOR UPDATE SKIP LOCKED</code> — é isso que impede dois ticks de notificarem o mesmo prazo. Ler-e-depois-apagar seria mais simples e duplicaria notificação.</li>
+            <li data-i18n-html="o1.d3.html"><strong>A API roda numa Edge Function do Supabase, não na Vercel.</strong> Lá dentro a chave de serviço já existe no ambiente, então o projeto sobe sem ninguém cadastrar variável nenhuma. O agendamento é o <code>pg_cron</code> do próprio Postgres — sem serviço externo e sem plano pago.</li>
+            <li data-i18n-html="o1.d4.html"><strong>Não existe cadastro público, e isso é de propósito.</strong> É um assistente pessoal que empurra notificação para a tela de bloqueio do meu próprio celular, não um SaaS: conta nova se cria por SQL. A tela de acesso ainda limita a cinco tentativas por origem, e <em>estar bloqueado vence a senha certa</em> — conferir a credencial antes deixaria o limite decorativo.</li>
+          </ul>
+        </div>
+
+        <div class="obra-ficha">
+          <p class="rotulo"><span data-i18n="obra.ficha">O que foi usado, e por quê</span></p>
+          <dl data-i18n-ficha="o1.ficha">
+            <dt>PWA + Service Worker</dt><dd>instala na tela de início e abre sem rede</dd>
+            <dt>Supabase Postgres</dt><dd>base e fila de avisos no mesmo lugar, numa transação só</dd>
+            <dt>Deno Edge Function</dt><dd>a API; a service key já existe no ambiente, zero variável para cadastrar</dd>
+            <dt>pg_cron + pg_net</dt><dd>o relógio mora dentro do banco — sem serviço externo, sem plano pago</dd>
+            <dt>Web Push (VAPID)</dt><dd>vai direto ao aparelho, sem intermediário e sem custo</dd>
+            <dt>bcrypt via pgcrypto</dt><dd>senha nunca em claro; conferida dentro do Postgres</dd>
+            <dt>Whisper (Groq)</dt><dd>transcreve o áudio na camada gratuita</dd>
+            <dt>Claude API</dt><dd>opcional, e só quando o recado não traz data reconhecível</dd>
+          </dl>
+        </div>
+
+        <div class="obra-arq">
+          <p class="rotulo"><span data-i18n="obra.arquitetura">Arquitetura</span></p>
+          <figure class="obra-diag">
+            <svg class="dg" viewBox="0 0 380 626" role="img" data-i18n-rotulo="d1.legenda" aria-label="·" xmlns="http://www.w3.org/2000/svg">
+              <rect class="dg-cx" x="10" y="8" width="240" height="42" rx="7"/>
+              <text class="dg-rot" x="130" y="33" text-anchor="middle" data-i18n="d1.n1">Recado — texto ou áudio</text>
+              <line class="dg-seta" x1="130" y1="50" x2="130" y2="84"/>
+              <polygon class="dg-ponta" points="130,92 125,83 135,83"/>
+              <text class="dg-arot" x="140" y="74" data-i18n="d1.a1">áudio → Whisper</text>
+              <rect class="dg-cx dg-cx-forte" x="10" y="92" width="240" height="52" rx="7"/>
+              <text class="dg-rot" x="130" y="115" text-anchor="middle" data-i18n="d1.n2">Interpretador local</text>
+              <text class="dg-nota" x="130" y="131" text-anchor="middle" data-i18n="d1.n2b">determinístico · sem custo</text>
+              <line class="dg-seta dg-tracejada" x1="250" y1="118" x2="254" y2="118"/>
+              <polygon class="dg-ponta" points="262,118 253,113 253,123"/>
+              <rect class="dg-cx dg-tracejada" x="262" y="100" width="110" height="36" rx="7"/>
+              <text class="dg-rot" x="317" y="122" text-anchor="middle" data-i18n="d1.r1">Claude API</text>
+              <text class="dg-nota" x="317" y="150" text-anchor="middle" data-i18n="d1.r1b">só sem data</text>
+              <line class="dg-seta" x1="130" y1="144" x2="130" y2="178"/>
+              <polygon class="dg-ponta" points="130,186 125,177 135,177"/>
+              <text class="dg-arot" x="140" y="168" data-i18n="d1.a2">grava o lembrete</text>
+              <rect class="dg-cx" x="10" y="186" width="240" height="42" rx="7"/>
+              <text class="dg-rot" x="130" y="211" text-anchor="middle" data-i18n="d1.n3">Lembrete + escada de avisos</text>
+              <line class="dg-seta" x1="130" y1="228" x2="130" y2="262"/>
+              <polygon class="dg-ponta" points="130,270 125,261 135,261"/>
+              <text class="dg-arot" x="140" y="252" data-i18n="d1.a5">enfileira os avisos</text>
+              <rect class="dg-grupo" x="10" y="270" width="240" height="86" rx="9"/>
+              <text class="dg-grot" x="22" y="288" data-i18n="d1.g">Postgres</text>
+              <rect class="dg-cx" x="20" y="298" width="110" height="42" rx="7"/>
+              <text class="dg-rot" x="75" y="323" text-anchor="middle" data-i18n="d1.g1">fila de avisos</text>
+              <rect class="dg-cx" x="142" y="298" width="98" height="42" rx="7"/>
+              <text class="dg-rot" x="191" y="323" text-anchor="middle" data-i18n="d1.g2">pg_cron</text>
+              <line class="dg-seta" x1="130" y1="356" x2="130" y2="390"/>
+              <polygon class="dg-ponta" points="130,398 125,389 135,389"/>
+              <text class="dg-arot" x="140" y="380" data-i18n="d1.a3">a cada 1 minuto</text>
+              <rect class="dg-cx" x="10" y="398" width="240" height="52" rx="7"/>
+              <text class="dg-rot" x="130" y="421" text-anchor="middle" data-i18n="d1.n4">tick · Edge Function</text>
+              <text class="dg-nota" x="130" y="437" text-anchor="middle" data-i18n="d1.n4b">DELETE … RETURNING · SKIP LOCKED</text>
+              <line class="dg-seta" x1="130" y1="450" x2="130" y2="484"/>
+              <polygon class="dg-ponta" points="130,492 125,483 135,483"/>
+              <text class="dg-arot" x="140" y="474" data-i18n="d1.a4">sem intermediário</text>
+              <rect class="dg-cx" x="10" y="492" width="240" height="42" rx="7"/>
+              <text class="dg-rot" x="130" y="517" text-anchor="middle" data-i18n="d1.n5">Web Push · VAPID</text>
+              <line class="dg-seta" x1="130" y1="534" x2="130" y2="568"/>
+              <polygon class="dg-ponta" points="130,576 125,567 135,567"/>
+              <text class="dg-arot" x="140" y="558" data-i18n="d1.a6">com o app fechado</text>
+              <rect class="dg-cx" x="10" y="576" width="240" height="42" rx="7"/>
+              <text class="dg-rot" x="130" y="601" text-anchor="middle" data-i18n="d1.n6">Tela de bloqueio</text>
+            </svg>
+            <figcaption data-i18n="d1.legenda">O caminho de um recado até a notificação na tela de bloqueio. A leitura da data é determinística; a IA é um desvio opcional.</figcaption>
+          </figure>
+        </div>
+
+        <div class="obra-numeros">
+          <div><div class="numero-val">74</div><div class="numero-rot" data-i18n="o1.n1">testes automatizados</div></div>
+          <div><div class="numero-val">R$ 0</div><div class="numero-rot" data-i18n="o1.n2">custo mensal de infraestrutura</div></div>
+          <div><div class="numero-val">1 min</div><div class="numero-rot" data-i18n="o1.n3">intervalo do tick no pg_cron</div></div>
+        </div>
+
+        <a class="obra-link" href="https://assistentepessoal.vercel.app" target="_blank" rel="noopener">
+          <span data-i18n="obra.abrirConta">Abrir o app · pede conta</span> <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- 02 · R2D -->
+    <article class="obra revelar">
+      <div class="obra-rail">
+        <div class="obra-indice" aria-hidden="true">02</div>
+        <span class="selo selo-vivo" data-i18n="selo.vivo">No ar</span>
+      </div>
+      <div class="obra-corpo">
+        <h3 data-i18n="o2.nome">Relatório de Execução do R2D</h3>
+        <p class="obra-tese" data-i18n="o2.tese">O plano já foi aprovado. O que falta é provar a execução.</p>
+        <p data-i18n="o2.desc">Ferramenta de campo para a força de representantes da indústria farmacêutica. Lê o PDF do plano aprovado apenas como referência, registra as ações realizadas (data, ação, PDV ou médico, resultado, fotos) e os indicadores mês a mês, e fecha um relatório de três páginas em PDF para a gerência — números primeiro, depois objetivo e gap, depois as ações em ordem cronológica.</p>
+
+        <div class="obra-decisoes">
+          <p class="rotulo"><span data-i18n="obra.decisoes">Decisões que importaram</span></p>
+          <ul>
+            <li data-i18n-html="o2.d1.html"><strong>O extrator descarta de propósito a seção de indicadores do PDF.</strong> Ler market share de dentro do plano seria inventar um número que vai subir para a gerência. A ferramenta guarda, compara e desenha — não calcula, não estima e não completa indicador nenhum. Diferença entre dois valores digitados é comparação; o resto seria chute com cara de dado.</li>
+            <li data-i18n-html="o2.d2.html"><strong>Nada de CDN.</strong> pdf.js, html2canvas, jsPDF e a fonte são vendorizados e guardados pelo service worker. O cenário real é corredor de farmácia e sala de espera de consultório: o app tem que abrir sem sinal, ou não serve para nada.</li>
+            <li data-i18n-html="o2.d3.html"><strong>Sem cadastro, sem login, sem servidor.</strong> Tudo vive no IndexedDB do navegador. A contrapartida foi assumida de frente, não escondida: backup e restauração em JSON com as fotos embutidas, no topo da tela.</li>
+          </ul>
+        </div>
+
+        <div class="obra-ficha">
+          <p class="rotulo"><span data-i18n="obra.ficha">O que foi usado, e por quê</span></p>
+          <dl data-i18n-ficha="o2.ficha">
+            <dt>PWA offline-first</dt><dd>corredor de farmácia e sala de espera são o cenário real</dd>
+            <dt>pdf.js</dt><dd>lê o plano aprovado no próprio navegador; nenhum arquivo sobe para lugar nenhum</dd>
+            <dt>IndexedDB</dt><dd>tudo mora no aparelho — sem cadastro, sem login, sem servidor</dd>
+            <dt>Gráficos SVG escritos à mão</dt><dd>um gráfico por indicador; porcentagem e número índice não dividem eixo</dd>
+            <dt>html2canvas + jsPDF</dt><dd>fecha o relatório em PDF dentro do navegador</dd>
+            <dt>Service Worker</dt><dd>guarda as bibliotecas e a fonte; nada vem de CDN</dd>
+            <dt>Backup em JSON</dt><dd>a contrapartida de não ter servidor, assumida de frente, com as fotos embutidas</dd>
+          </dl>
+        </div>
+
+        <div class="obra-arq">
+          <p class="rotulo"><span data-i18n="obra.arquitetura">Arquitetura</span></p>
+          <figure class="obra-diag">
+            <svg class="dg" viewBox="0 0 380 322" role="img" data-i18n-rotulo="d2.legenda" aria-label="·" xmlns="http://www.w3.org/2000/svg">
+              <rect class="dg-cx" x="10" y="8" width="200" height="42" rx="7"/>
+              <text class="dg-rot" x="110" y="33" text-anchor="middle" data-i18n="d2.n1">PDF do plano aprovado</text>
+              <line class="dg-seta" x1="110" y1="50" x2="110" y2="84"/>
+              <polygon class="dg-ponta" points="110,92 105,83 115,83"/>
+              <text class="dg-arot" x="120" y="74" data-i18n="d2.a1">pdf.js</text>
+              <rect class="dg-cx" x="10" y="92" width="200" height="42" rx="7"/>
+              <text class="dg-rot" x="110" y="117" text-anchor="middle" data-i18n="d2.n2">extrator</text>
+              <line class="dg-seta dg-tracejada" x1="210" y1="113" x2="214" y2="113"/>
+              <polygon class="dg-ponta" points="222,113 213,108 213,118"/>
+              <rect class="dg-cx dg-cx-descarte dg-tracejada" x="222" y="95" width="150" height="36" rx="7"/>
+              <text class="dg-rot dg-rot-peq" x="297" y="117" text-anchor="middle" data-i18n="d2.r1">indicadores do PDF</text>
+              <text class="dg-nota dg-descarte" x="297" y="146" text-anchor="middle" data-i18n="d2.r1b">descartado</text>
+              <text class="dg-nota dg-descarte" x="297" y="159" text-anchor="middle" data-i18n="d2.r1c">de propósito</text>
+              <line class="dg-seta" x1="110" y1="134" x2="110" y2="178"/>
+              <polygon class="dg-ponta" points="110,186 105,177 115,177"/>
+              <text class="dg-arot" x="120" y="163" data-i18n="d2.a2">objetivo · gap · ações</text>
+              <rect class="dg-cx" x="10" y="186" width="200" height="42" rx="7"/>
+              <text class="dg-rot" x="110" y="211" text-anchor="middle" data-i18n="d2.n3">IndexedDB · no navegador</text>
+              <line class="dg-seta" x1="222" y1="207" x2="218" y2="207"/>
+              <polygon class="dg-ponta" points="210,207 219,202 219,212"/>
+              <text class="dg-arot" x="216" y="199" text-anchor="middle" data-i18n="d2.a4">nunca lidos do PDF</text>
+              <rect class="dg-cx" x="222" y="189" width="150" height="36" rx="7"/>
+              <text class="dg-rot dg-rot-peq" x="297" y="211" text-anchor="middle" data-i18n="d2.r2">números digitados</text>
+              <line class="dg-seta" x1="110" y1="228" x2="110" y2="262"/>
+              <polygon class="dg-ponta" points="110,270 105,261 115,261"/>
+              <text class="dg-arot" x="120" y="252" data-i18n="d2.a3">html2canvas + jsPDF</text>
+              <rect class="dg-cx" x="10" y="270" width="200" height="42" rx="7"/>
+              <text class="dg-rot" x="110" y="295" text-anchor="middle" data-i18n="d2.n4">Relatório · 3 páginas</text>
+            </svg>
+            <figcaption data-i18n="d2.legenda">O plano entra só como referência. A seção de indicadores é descartada de propósito: os números vêm digitados, não lidos.</figcaption>
+          </figure>
+        </div>
+
+        <div class="obra-numeros">
+          <div><div class="numero-val">21</div><div class="numero-rot" data-i18n="o2.n1">testes automatizados</div></div>
+          <div><div class="numero-val">3</div><div class="numero-rot" data-i18n="o2.n2">páginas no relatório final</div></div>
+          <div><div class="numero-val">1,3 s</div><div class="numero-rot" data-i18n="o2.n3">para gerar um PDF de 0,82 MB</div></div>
+        </div>
+
+        <a class="obra-link" href="https://r2d-relatorio.vercel.app" target="_blank" rel="noopener">
+          <span data-i18n="obra.abrir">Abrir o produto</span> <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- 03 · Marque Seu Jogo -->
+    <article class="obra revelar">
+      <div class="obra-rail">
+        <div class="obra-indice" aria-hidden="true">03</div>
+        <span class="selo selo-vivo" data-i18n="selo.vivo">No ar</span>
+      </div>
+      <div class="obra-corpo">
+        <h3 data-i18n="o3.nome">Marque Seu Jogo</h3>
+        <p class="obra-tese" data-i18n="o3.tese">Quatro cronômetros diferentes num bolso só.</p>
+        <p data-i18n="o3.desc">Cronômetro e placar para quem joga. Quatro modos — cronômetro, timer, HIIT e Tabata — mais um placar de vôlei separado. Instalável na tela de início, funciona sem rede, e põe os números numa fonte inclinada que se lê da beira da quadra.</p>
+
+        <div class="obra-decisoes">
+          <p class="rotulo"><span data-i18n="obra.decisoes">Decisões que importaram</span></p>
+          <ul>
+            <li data-i18n-html="o3.d1.html"><strong>PWA de verdade, não site que finge ser app.</strong> Service worker próprio, instalação na tela de início e funcionamento integral sem rede — que é o estado normal da maioria dos ginásios.</li>
+          </ul>
+        </div>
+
+        <div class="obra-ficha">
+          <p class="rotulo"><span data-i18n="obra.ficha">O que foi usado, e por quê</span></p>
+          <dl data-i18n-ficha="o3.ficha">
+            <dt>PWA + Service Worker</dt><dd>instala e roda sem rede, que é o estado normal de um ginásio</dd>
+            <dt>Screen Wake Lock</dt><dd>a tela não apaga no meio de um set</dd>
+            <dt>Web Audio + vibração</dt><dd>apita e vibra no fim do intervalo, com o celular no bolso</dd>
+            <dt>localStorage</dt><dd>guarda o placar e o tema entre aberturas</dd>
+            <dt>HTML, CSS e JS sem framework</dt><dd>um cronômetro não precisa de árvore de dependência</dd>
+          </dl>
+        </div>
+
+        <div class="obra-numeros">
+          <div><div class="numero-val">4</div><div class="numero-rot" data-i18n="o3.n1">modos de contagem</div></div>
+          <div><div class="numero-val">2</div><div class="numero-rot" data-i18n="o3.n2">apps no mesmo endereço</div></div>
+        </div>
+
+        <a class="obra-link" href="https://marqueseujogo.vercel.app" target="_blank" rel="noopener">
+          <span data-i18n="obra.abrir">Abrir o produto</span> <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- 04 · Rep.Rota -->
+    <article class="obra revelar">
+      <div class="obra-rail">
+        <div class="obra-indice" aria-hidden="true">04</div>
+        <span class="selo selo-entregue" data-i18n="selo.entregue">Entregue</span>
+      </div>
+      <div class="obra-corpo">
+        <h3 data-i18n="o4.nome">Rep.Rota</h3>
+        <p class="obra-tese" data-i18n="o4.tese">O representante não perde venda por preguiça. Perde por roteiro ruim.</p>
+        <p data-i18n="o4.desc">Sistema de gestão de carteira para representantes comerciais, consultores de vendas e consultores médicos: clientes categorizados por potencial, roteiro de visitas, agenda de ciclos e mapa, num painel só, acessível de qualquer aparelho.</p>
+
+        <div class="obra-decisoes">
+          <p class="rotulo"><span data-i18n="obra.decisoes">Decisões que importaram</span></p>
+          <ul>
+            <li data-i18n-html="o4.d1.html"><strong>Construído a partir da rotina, não de um briefing.</strong> A categorização por potencial e a agenda de ciclos existem porque é assim que o trabalho se organiza na prática — não porque ficavam bem numa tela.</li>
+          </ul>
+        </div>
+
+        <div class="obra-ficha">
+          <p class="rotulo"><span data-i18n="obra.ficha">O que foi usado, e por quê</span></p>
+          <dl data-i18n-ficha="o4.ficha">
+            <dt>Carteira categorizada por potencial</dt><dd>é assim que a visita se decide na prática</dd>
+            <dt>Roteiro de visitas com mapa</dt><dd>a perda não é preguiça, é quilômetro mal gasto</dd>
+            <dt>Agenda de ciclos</dt><dd>o trabalho do representante é cíclico, não linear</dd>
+            <dt>Multiusuário</dt><dd>a equipe inteira na mesma base, cada um com a sua carteira</dd>
+            <dt>Acesso por navegador</dt><dd>funciona no celular no carro e no computador em casa</dd>
+          </dl>
+        </div>
+
+        <figure class="obra-fig par">
+          <img src="img/rep-rota-painel.jpg" width="700" height="439" loading="lazy" decoding="async" alt="Painel de carteira do Rep.Rota" data-i18n-alt="o4.fig">
+          <img src="img/rep-rota-login.jpg" width="700" height="886" loading="lazy" decoding="async" alt="Tela de acesso do Rep.Rota" data-i18n-alt="o4.fig">
+          <figcaption data-i18n="o4.fig">Painel de carteira e tela de acesso.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- 05 · Finances Control -->
+    <article class="obra revelar">
+      <div class="obra-rail">
+        <div class="obra-indice" aria-hidden="true">05</div>
+        <span class="selo selo-entregue" data-i18n="selo.entregue">Entregue</span>
+      </div>
+      <div class="obra-corpo">
+        <h3 data-i18n="o5.nome">Finances Control</h3>
+        <p class="obra-tese" data-i18n="o5.tese">Não falta disciplina. Falta enxergar para onde o dinheiro vai.</p>
+        <p data-i18n="o5.desc">Aplicativo de organização financeira com painel visual e diagnóstico por categoria: mostra em tempo real onde o dinheiro está indo, sinaliza gasto crítico, acompanha meta de poupança e exibe o orçamento do mês.</p>
+
+        <div class="obra-decisoes">
+          <p class="rotulo"><span data-i18n="obra.decisoes">Decisões que importaram</span></p>
+          <ul>
+            <li data-i18n-html="o5.d1.html"><strong>Diagnóstico, não extrato.</strong> Listar gasto qualquer planilha faz. O valor está em apontar a categoria que estourou e o quanto ainda falta para a meta — a leitura, não o dado.</li>
+          </ul>
+        </div>
+
+        <div class="obra-ficha">
+          <p class="rotulo"><span data-i18n="obra.ficha">O que foi usado, e por quê</span></p>
+          <dl data-i18n-ficha="o5.ficha">
+            <dt>Painel visual do mês</dt><dd>o orçamento inteiro numa tela só</dd>
+            <dt>Diagnóstico por categoria</dt><dd>aponta onde estourou, em vez de listar gasto</dd>
+            <dt>Alerta de gasto crítico</dt><dd>avisa antes do fim do mês, quando ainda dá para corrigir</dd>
+            <dt>Meta de poupança</dt><dd>mostra quanto falta, não só quanto já foi</dd>
+            <dt>Multiusuário</dt><dd>a casa inteira enxergando o mesmo número</dd>
+          </dl>
+        </div>
+
+        <figure class="obra-fig retrato">
+          <img src="img/finances-control-dashboard.jpg" width="700" height="830" loading="lazy" decoding="async" alt="Painel do Finances Control" data-i18n-alt="o5.fig">
+          <figcaption data-i18n="o5.fig">Painel com diagnóstico por categoria e meta de poupança.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- 06 · Assistente no WhatsApp -->
+    <article class="obra revelar">
+      <div class="obra-rail">
+        <div class="obra-indice" aria-hidden="true">06</div>
+        <span class="selo selo-entregue" data-i18n="selo.entregue">Entregue</span>
+      </div>
+      <div class="obra-corpo">
+        <h3 data-i18n="o6.nome">Assistente no WhatsApp</h3>
+        <p class="obra-tese" data-i18n="o6.tese">80% do atendimento é previsível. Nenhuma parte dele precisava de você.</p>
+        <p data-i18n="o6.desc">Assistente conversacional no WhatsApp que atende, tira dúvida, coleta informação e agenda consulta 24 horas por dia, sem intervenção humana. Chega até uma pessoa apenas o contato já qualificado.</p>
+
+        <div class="obra-decisoes">
+          <p class="rotulo"><span data-i18n="obra.decisoes">Decisões que importaram</span></p>
+          <ul>
+            <li data-i18n-html="o6.d1.html"><strong>Qualificar é o produto; responder é o efeito colateral.</strong> Um bot que só responde economiza digitação. Um bot que qualifica decide o que merece o tempo de uma pessoa — e é aí que o custo cai de verdade.</li>
+          </ul>
+        </div>
+
+        <div class="obra-ficha">
+          <p class="rotulo"><span data-i18n="obra.ficha">O que foi usado, e por quê</span></p>
+          <dl data-i18n-ficha="o6.ficha">
+            <dt>Atendimento 24 h no WhatsApp</dt><dd>a pessoa escreve quando pode, não quando você atende</dd>
+            <dt>IA conversacional</dt><dd>entende a pergunta em vez de oferecer um menu</dd>
+            <dt>Qualificação automática</dt><dd>decide o que merece o tempo de uma pessoa</dd>
+            <dt>Agendamento direto</dt><dd>fecha a consulta na conversa, sem transferir para ninguém</dd>
+            <dt>WhatsApp nativo</dt><dd>o cliente não instala nada</dd>
+          </dl>
+        </div>
+
+        <div class="obra-arq">
+          <p class="rotulo"><span data-i18n="obra.arquitetura">Arquitetura</span></p>
+          <figure class="obra-diag">
+            <svg class="dg" viewBox="0 0 380 418" role="img" data-i18n-rotulo="d3.legenda" aria-label="·" xmlns="http://www.w3.org/2000/svg">
+              <rect class="dg-cx" x="70" y="8" width="240" height="42" rx="7"/>
+              <text class="dg-rot" x="190" y="33" text-anchor="middle" data-i18n="d3.n1">Mensagem do cliente</text>
+              <line class="dg-seta" x1="190" y1="50" x2="190" y2="84"/>
+              <polygon class="dg-ponta" points="190,92 185,83 195,83"/>
+              <text class="dg-arot" x="200" y="74" data-i18n="d3.a2">a qualquer hora</text>
+              <rect class="dg-cx" x="70" y="92" width="240" height="42" rx="7"/>
+              <text class="dg-rot" x="190" y="117" text-anchor="middle" data-i18n="d3.n2">Assistente · IA</text>
+              <line class="dg-seta" x1="190" y1="134" x2="190" y2="168"/>
+              <polygon class="dg-ponta" points="190,176 185,167 195,167"/>
+              <text class="dg-arot" x="200" y="158" data-i18n="d3.a3">resolve sozinho</text>
+              <rect class="dg-grupo" x="70" y="176" width="240" height="140" rx="9"/>
+              <text class="dg-grot" x="82" y="194" data-i18n="d3.g">24 h · sem pessoa envolvida</text>
+              <rect class="dg-cx" x="82" y="204" width="216" height="32" rx="7"/>
+              <text class="dg-rot" x="190" y="224" text-anchor="middle" data-i18n="d3.g1">responde dúvida</text>
+              <rect class="dg-cx" x="82" y="240" width="216" height="32" rx="7"/>
+              <text class="dg-rot" x="190" y="260" text-anchor="middle" data-i18n="d3.g2">coleta informação</text>
+              <rect class="dg-cx" x="82" y="276" width="216" height="32" rx="7"/>
+              <text class="dg-rot" x="190" y="296" text-anchor="middle" data-i18n="d3.g3">agenda consulta</text>
+              <line class="dg-seta" x1="190" y1="316" x2="190" y2="358"/>
+              <polygon class="dg-ponta" points="190,366 185,357 195,357"/>
+              <text class="dg-arot" x="200" y="344" data-i18n="d3.a1">só o contato qualificado</text>
+              <rect class="dg-cx dg-cx-forte" x="70" y="366" width="240" height="42" rx="7"/>
+              <text class="dg-rot" x="190" y="391" text-anchor="middle" data-i18n="d3.n3">Pessoa</text>
+            </svg>
+            <figcaption data-i18n="d3.legenda">Responder é o efeito colateral. O produto é decidir o que merece chegar numa pessoa.</figcaption>
+          </figure>
+        </div>
+
+        <figure class="obra-fig alto">
+          <img src="img/bot-assistente-virtual-whatsapp.jpg" width="992" height="2000" loading="lazy" decoding="async" alt="Conversa do assistente no WhatsApp" data-i18n-alt="o6.fig">
+          <figcaption data-i18n="o6.fig">Conversa real do assistente no WhatsApp.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- 07 · NDA -->
+    <article class="obra revelar">
+      <div class="obra-rail">
+        <div class="obra-indice" aria-hidden="true">07</div>
+        <span class="selo selo-nda" data-i18n="selo.nda">Sob NDA</span>
+      </div>
+      <div class="obra-corpo">
+        <h3 data-i18n="o7.nome">Ferramenta clínica · Pharma</h3>
+        <p class="obra-tese" data-i18n="o7.tese">A venda trava no segundo em que o profissional hesita.</p>
+        <p data-i18n="o7.desc">Solução web desenvolvida para uma grande empresa farmacêutica. Apoia o profissional de saúde na decisão clínica no momento exato da orientação ao paciente. Escopo, arquitetura e resultado disponíveis mediante assinatura de NDA.</p>
+
+        <div class="obra-decisoes">
+          <p class="rotulo"><span data-i18n="obra.decisoes">Decisões que importaram</span></p>
+          <ul>
+            <li data-i18n-html="o7.d1.html"><strong>O gargalo nunca foi informação — era o momento.</strong> O conteúdo já existia em bula e material técnico. O que faltava era ele chegar no segundo da decisão, sem exigir leitura. Por isso a ferramenta é uma entrada e uma resposta, não uma biblioteca.</li>
+          </ul>
+        </div>
+
+        <div class="obra-ficha">
+          <p class="rotulo"><span data-i18n="obra.ficha">O que foi usado, e por quê</span></p>
+          <dl data-i18n-ficha="o7.ficha">
+            <dt>Uma entrada, uma resposta</dt><dd>a decisão clínica acontece em segundos, não em leitura</dd>
+            <dt>Apoio no ponto da orientação</dt><dd>a informação chega no instante em que a dúvida aparece</dd>
+            <dt>Web, sem instalação</dt><dd>o profissional abre no aparelho que já tem na mão</dd>
+            <dt>Escopo e arquitetura sob NDA</dt><dd>detalhes disponíveis mediante assinatura</dd>
+          </dl>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ===================== MÉTODO ===================== -->
+  <section class="secao" id="metodo">
+    <div class="secao-cab revelar">
+      <p class="rotulo"><span data-i18n="met.rotulo">02 — Método</span></p>
+      <h2 data-i18n="met.titulo">Quatro regras que eu não quebro.</h2>
+      <p class="prosa" data-i18n="met.lead">Não são preferências de estilo. Cada uma delas custou caro para ser aprendida em algum projeto desta página.</p>
+    </div>
+
+    <div class="metodo revelar">
+      <div class="principio">
+        <div class="principio-n">01</div>
+        <h3 data-i18n="met.p1.t">Custo zero é requisito, não detalhe.</h3>
+        <p data-i18n="met.p1.d">O que eu construo roda em camada gratuita de ponta a ponta. Não por elegância: um projeto que precisa de fatura para continuar existindo morre no primeiro mês em que ninguém olhar para ele.</p>
+      </div>
+      <div class="principio">
+        <div class="principio-n">02</div>
+        <h3 data-i18n="met.p2.t">A IA fica fora do caminho crítico.</h3>
+        <p data-i18n="met.p2.d">O núcleo é determinístico e testável. A IA entra como reforço, é opcional e pode ser desligada por variável de ambiente. Se a chave sumir, o produto continua inteiro.</p>
+      </div>
+      <div class="principio">
+        <div class="principio-n">03</div>
+        <h3 data-i18n="met.p3.t">Offline é o cenário, não a exceção.</h3>
+        <p data-i18n="met.p3.d">Corredor de farmácia, sala de espera, beira de quadra. Se o app só funciona com sinal bom, ele não funciona onde vai ser usado.</p>
+      </div>
+      <div class="principio">
+        <div class="principio-n">04</div>
+        <h3 data-i18n="met.p4.t">Eu entrego o problema resolvido, não o pedido atendido.</h3>
+        <p data-i18n="met.p4.d">O pedido é o sintoma que a pessoa conseguiu nomear. Meu trabalho é entender a operação fundo o suficiente para ver o que está atrás dele — e, às vezes, dizer que o que foi pedido não resolve.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PERFIL ===================== -->
+  <section class="secao" id="perfil">
+    <div class="secao-cab revelar">
+      <p class="rotulo"><span data-i18n="perf.rotulo">03 — Perfil</span></p>
+    </div>
+
+    <div class="perfil revelar">
+      <div class="perfil-foto">
+        <img src="img/beatriz-reis.jpg" width="552" height="800" loading="lazy" decoding="async" alt="Retrato de Beatriz C. Reis" data-i18n-alt="perf.foto">
+      </div>
+      <div>
+        <h2 style="font-size:clamp(1.5rem,3.4vw,2.2rem);margin-bottom:1.2rem" data-i18n="perf.titulo">Quem escreve o código e quem usa o produto são a mesma pessoa.</h2>
+        <p class="prosa" data-i18n="perf.p1">Sou pós-graduada em Marketing e Comunicação e trabalho na indústria farmacêutica, na operação comercial de campo. Não sou uma desenvolvedora que aprendeu sobre pharma: sou alguém de dentro da operação que passou a construir o software dela. É por isso que a ferramenta de relatório sabe que foto de evidência precisa caber três por linha, e que o assistente de prazos entende «sexta às 14h» sem pedir calendário.</p>
+        <p class="prosa" data-i18n="perf.p2">Gerencio projeto e gerencio IA — as duas coisas no mesmo lugar, onde a maior parte das empresas ainda tem uma pessoa para cada. Escrevo o código, decido a arquitetura, meço o contraste da paleta e respondo pelo resultado.</p>
+
+        <div class="credenciais">
+          <span class="credencial" data-i18n="perf.c1">Pós-graduação · Marketing e Comunicação</span>
+          <span class="credencial" data-i18n="perf.c2">IA Manager</span>
+          <span class="credencial" data-i18n="perf.c3">Project Manager</span>
+          <span class="credencial" data-i18n="perf.c4">Indústria farmacêutica</span>
+          <span class="credencial" data-i18n="perf.c5">Desenvolvimento full-stack</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="capacidades revelar" style="margin-top:3rem">
+      <div class="cap">
+        <h3 data-i18n="cap.g1">Produto e operação</h3>
+        <ul data-i18n-lista="cap.g1i">
+          <li>Descoberta a partir da rotina</li>
+          <li>Definição de escopo</li>
+          <li>Gestão de projeto</li>
+          <li>Gestão de IA aplicada</li>
+          <li>Operação comercial farmacêutica</li>
+          <li>Relação com PDV e prescritor</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <h3 data-i18n="cap.g2">Construção</h3>
+        <ul data-i18n-lista="cap.g2i">
+          <li>HTML, CSS e JavaScript sem framework</li>
+          <li>PWA e service workers</li>
+          <li>Node e funções serverless</li>
+          <li>Postgres e PostgREST (Supabase)</li>
+          <li>Deno Edge Functions</li>
+          <li>Web Push com VAPID</li>
+          <li>Testes automatizados</li>
+        </ul>
+      </div>
+      <div class="cap">
+        <h3 data-i18n="cap.g3">Decisões que eu assumo</h3>
+        <ul data-i18n-lista="cap.g3i">
+          <li>Arquitetura de custo zero</li>
+          <li>Acessibilidade e contraste medido</li>
+          <li>Offline-first</li>
+          <li>Autenticação e limite de tentativa</li>
+          <li>Onde a IA entra e onde não entra</li>
+          <li>Identidade visual e tipografia</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATO ===================== -->
+  <section class="secao" id="contato">
+    <div class="contato-cx revelar">
+      <p class="rotulo"><span data-i18n="cont.rotulo">04 — Contato</span></p>
+      <h2 data-i18n-html="cont.titulo.html">Se alguma coisa aqui <em>resolve</em> um problema seu, me escreve.</h2>
+      <p class="prosa" data-i18n="cont.lead">Respondo em português e em inglês. Para conversa de trabalho, o e-mail e o LinkedIn são o caminho mais direto.</p>
+
+      <div class="canais">
+        <a class="canal" data-canal="email" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+          <span>
+            <span class="canal-rot" data-i18n="cont.email">E-mail</span><br>
+            <span class="canal-val"></span>
+          </span>
+          <span class="canal-seta" aria-hidden="true">→</span>
+        </a>
+        <a class="canal" data-canal="linkedin" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5M3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05C20.4 8.65 22 10.9 22 14.4V21h-4v-5.9c0-1.4-.03-3.2-2-3.2-2 0-2.3 1.53-2.3 3.1V21H9z"/></svg>
+          <span>
+            <span class="canal-rot" data-i18n="cont.linkedin">LinkedIn</span><br>
+            <span class="canal-val"></span>
+          </span>
+          <span class="canal-seta" aria-hidden="true">→</span>
+        </a>
+        <a class="canal" data-canal="github" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5"/></svg>
+          <span>
+            <span class="canal-rot" data-i18n="cont.github">GitHub</span><br>
+            <span class="canal-val"></span>
+          </span>
+          <span class="canal-seta" aria-hidden="true">→</span>
+        </a>
+        <a class="canal" data-canal="whatsapp" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.03 1.02-1.03 2.48s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.28.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.04 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.44-4.44 9.88-9.88 9.88m8.41-18.3A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.09.54 4.14 1.58 5.94L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.17-1.24-6.16-3.48-8.4"/></svg>
+          <span>
+            <span class="canal-rot" data-i18n="cont.whatsapp">WhatsApp</span><br>
+            <span class="canal-val"></span>
+          </span>
+          <span class="canal-seta" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
 <footer>
-  <div class="foot-logo">bea<span>.</span>tech</div>
-  <p>© 2026 · Beatriz Reis · Tecnologia que resolve. Resultado que impressiona.</p>
+  <div class="rodape-in">
+    <div class="credito">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 62" role="img" aria-label="BCR — Beatriz C Reis">
+        <g fill="currentColor" stroke="none">
+          <path transform="translate(29.07 46) scale(0.03600 -0.036)" d="M39 708Q62 707 98.5 706Q135 705 171 705Q219 705 262.5 706Q306 707 324 707Q436 707 491.5 663Q547 619 547 550Q547 515 530.5 480.5Q514 446 477 418.5Q440 391 379 375L379 373Q463 364 511 337Q559 310 579 272.5Q599 235 599 194Q599 135 569 91.5Q539 48 482.5 24Q426 0 347 0Q325 0 280.5 1.5Q236 3 173 3Q135 3 98.5 2.5Q62 2 39 0L39 20Q73 22 90 28Q107 34 112.5 52Q118 70 118 106L118 602Q118 639 112.5 656.5Q107 674 89.5 680.5Q72 687 39 688ZM303 688Q260 688 246.5 671Q233 654 233 602L233 106Q233 71 239 53Q245 35 260.5 29Q276 23 306 23Q396 23 436.5 68.5Q477 114 477 198Q477 275 436.5 317Q396 359 303 359L206 359Q206 359 206 367.5Q206 376 206 376L292 376Q347 376 377 398.5Q407 421 418 458.5Q429 496 429 539Q429 613 400 650.5Q371 688 303 688Z"/>
+          <path transform="translate(62.08 46) scale(0.03600 -0.036)" d="M380 722Q446 722 488.5 702.5Q531 683 564 657Q584 642 594.5 653.5Q605 665 609 708L632 708Q630 670 629 616.5Q628 563 628 474L605 474Q598 518 591.5 546Q585 574 574.5 594Q564 614 546 633Q517 669 475 685Q433 701 386 701Q335 701 296 675.5Q257 650 230.5 603Q204 556 190 492Q176 428 176 352Q176 274 191 210.5Q206 147 234.5 101.5Q263 56 303.5 31.5Q344 7 394 7Q435 7 479 23.5Q523 40 549 74Q577 104 587.5 141.5Q598 179 605 244L628 244Q628 152 629 95.5Q630 39 632 0L609 0Q605 43 595.5 54Q586 65 564 51Q527 25 485.5 5.5Q444 -14 379 -14Q280 -14 206 29Q132 72 91 153Q50 234 50 348Q50 460 92.5 544Q135 628 209 675Q283 722 380 722Z"/>
+          <path transform="translate(97.06 46) scale(0.03600 -0.036)" d="M39 708Q62 707 98.5 706Q135 705 171 705Q219 705 262.5 706Q306 707 324 707Q409 707 465.5 685Q522 663 549.5 623.5Q577 584 577 533Q577 502 564.5 467.5Q552 433 521 403.5Q490 374 437 355Q384 336 302 336L206 336L206 356L292 356Q359 356 394.5 378.5Q430 401 442.5 438.5Q455 476 455 522Q455 601 421 644.5Q387 688 303 688Q260 688 246.5 671Q233 654 233 602L233 106Q233 70 239 52Q245 34 262 28Q279 22 312 20L312 0Q288 2 251.5 2.5Q215 3 177 3Q135 3 98.5 2.5Q62 2 39 0L39 20Q73 22 90 28Q107 34 112.5 52Q118 70 118 106L118 602Q118 639 112.5 656.5Q107 674 89.5 680.5Q72 687 39 688ZM208 353Q259 351 290 348.5Q321 346 342 344Q363 342 381 339Q456 329 490.5 299Q525 269 538 207L563 105Q572 62 582.5 44Q593 26 614 26Q630 27 640.5 35.5Q651 44 663 59L677 48Q654 17 629 1.5Q604 -14 562 -14Q519 -14 488.5 8.5Q458 31 445 94L425 194Q416 237 405 268.5Q394 300 374.5 318Q355 336 318 336L210 336Z"/>
+        </g>
+        <g stroke="currentColor" stroke-width="1.4">
+          <line x1="10" y1="8" x2="62" y2="8"/>
+          <line x1="88" y1="8" x2="140" y2="8"/>
+          <line x1="10" y1="56" x2="140" y2="56"/>
+        </g>
+        <path d="M75 4 l4 4 -4 4 -4 -4 z" fill="#d7ff1a" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      <span>Created by Beatriz C Reis</span>
+    </div>
+    <p class="colofao" data-i18n="rod.colofao">Feito à mão: HTML, CSS e JavaScript, sem framework e sem etapa de build. Duas fontes, nenhuma outra dependência externa. Paleta com contraste medido contra a WCAG AA. © 2026</p>
+  </div>
 </footer>
 
-<script>
-const cursor = document.getElementById('cursor');
-let mx=0,my=0,cx=0,cy=0;
-document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; });
-(function anim(){
-  cx+=(mx-cx)*.15; cy+=(my-cy)*.15;
-  cursor.style.left=cx+'px'; cursor.style.top=cy+'px';
-  requestAnimationFrame(anim);
-})();
-document.querySelectorAll('a,button,.svc-item,.stat-cell,.preview-card').forEach(el=>{
-  el.addEventListener('mouseenter',()=>cursor.classList.add('expand'));
-  el.addEventListener('mouseleave',()=>cursor.classList.remove('expand'));
-});
-
-const obs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('visible');
-      obs.unobserve(e.target);
-    }
-  });
-},{threshold:.1});
-document.querySelectorAll('.reveal').forEach((el,i)=>{
-  el.style.transitionDelay=(i%3*.08)+'s';
-  obs.observe(el);
-});
-
-// Nav scroll + sticky action bar
-const nav = document.querySelector('nav');
-const actionBar = document.getElementById('actionBar');
-const heroH = document.querySelector('.hero').offsetHeight;
-window.addEventListener('scroll', ()=>{
-  const y = window.scrollY;
-  nav.classList.toggle('scrolled', y > 60);
-  const barVisible = y > heroH * 0.6;
-  actionBar.classList.toggle('visible', barVisible);
-  nav.classList.toggle('action-visible', barVisible);
-}, {passive: true});
-
-// Counter animation
-function animateCount(el){
-  const target = parseInt(el.dataset.count);
-  const prefix = el.dataset.prefix || '';
-  const suffix = el.dataset.suffix || '';
-  const duration = 1400;
-  const start = performance.now();
-  (function step(now){
-    const p = Math.min((now - start) / duration, 1);
-    const ease = 1 - Math.pow(1 - p, 3);
-    el.textContent = prefix + Math.round(ease * target) + suffix;
-    if(p < 1) requestAnimationFrame(step);
-  })(start);
-}
-const countObs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      animateCount(e.target);
-      countObs.unobserve(e.target);
-    }
-  });
-},{threshold:.5});
-document.querySelectorAll('.bento-num[data-count]').forEach(el=>countObs.observe(el));
-
-// Theme toggle
-const themeToggle = document.getElementById('themeToggle');
-const ttPill = document.getElementById('ttPill');
-const saved = localStorage.getItem('theme');
-if (saved === 'light') { document.body.classList.add('light'); ttPill.textContent = '◑ Dark'; }
-themeToggle.addEventListener('click', () => {
-  const isLight = document.body.classList.toggle('light');
-  ttPill.textContent = isLight ? '◑ Dark' : '☀ Light';
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
-});
-</script>
+<script src="js/conteudo.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
